@@ -18,6 +18,7 @@
 		53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
 		F753888615E9788600E6FA4E /* IPSupplyLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F753888515E9788600E6FA4E /* IPSupplyLevelView.m */; };
+		F75388CC15E9841400E6FA4E /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956EF15E961B90065A938 /* libZXingWidget.a */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
 		F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B815E913750065A938 /* CoreGraphics.framework */; };
@@ -32,7 +33,6 @@
 		F7C9564515E943B80065A938 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564415E943B80065A938 /* qr.png */; };
 		F7C9564715E948320065A938 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564615E948320065A938 /* search.png */; };
 		F7C956BF15E956EE0065A938 /* IPScannerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */; };
-		F7C956D415E95C8B0065A938 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D315E95C8B0065A938 /* libZXingWidget.a */; };
 		F7C956D615E95E3B0065A938 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D515E95E3B0065A938 /* AudioToolbox.framework */; };
 		F7C956D915E95E460065A938 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D715E95E460065A938 /* AddressBook.framework */; };
 		F7C956DA15E95E460065A938 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D815E95E460065A938 /* AddressBookUI.framework */; };
@@ -43,19 +43,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F75388DD15E9845E00E6FA4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
+			remoteInfo = ZXingTests;
+		};
 		F7C956EE15E961B90065A938 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = ZXingWidget;
-		};
-		F7C956F015E961B90065A938 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9E478C51220C4C300144387;
-			remoteInfo = ZXingTouch;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -116,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75388CC15E9841400E6FA4E /* libZXingWidget.a in Frameworks */,
 				F7C956E215E95E6A0065A938 /* libiconv.dylib in Frameworks */,
 				F7C956E015E95E590065A938 /* AVFoundation.framework in Frameworks */,
 				F7C956DD15E95E550065A938 /* CoreMedia.framework in Frameworks */,
@@ -123,7 +124,6 @@
 				F7C956D915E95E460065A938 /* AddressBook.framework in Frameworks */,
 				F7C956DA15E95E460065A938 /* AddressBookUI.framework in Frameworks */,
 				F7C956D615E95E3B0065A938 /* AudioToolbox.framework in Frameworks */,
-				F7C956D415E95C8B0065A938 /* libZXingWidget.a in Frameworks */,
 				F7C955B515E913750065A938 /* UIKit.framework in Frameworks */,
 				F7C955B715E913750065A938 /* Foundation.framework in Frameworks */,
 				F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */,
@@ -249,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C956EF15E961B90065A938 /* libZXingWidget.a */,
-				F7C956F115E961B90065A938 /* libZXingTouch.a */,
+				F75388DE15E9845E00E6FA4E /* ZXingTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,18 +309,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		F75388DE15E9845E00E6FA4E /* ZXingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZXingTests.octest;
+			remoteRef = F75388DD15E9845E00E6FA4E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F7C956EF15E961B90065A938 /* libZXingWidget.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libZXingWidget.a;
 			remoteRef = F7C956EE15E961B90065A938 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F7C956F115E961B90065A938 /* libZXingTouch.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libZXingTouch.a;
-			remoteRef = F7C956F015E961B90065A938 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

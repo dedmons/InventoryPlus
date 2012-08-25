@@ -42,7 +42,6 @@ unsigned char* GreyscaleRotatedLuminanceSource::getRow(int y, unsigned char* row
     throw IllegalArgumentException("Requested row is outside the image: " + y);
   }
   int width = getWidth();
-  // TODO(flyashi): determine if row has enough size.
   if (row == NULL) {
     row = new unsigned char[width];
   }
@@ -55,8 +54,12 @@ unsigned char* GreyscaleRotatedLuminanceSource::getRow(int y, unsigned char* row
 }
 
 unsigned char* GreyscaleRotatedLuminanceSource::getMatrix() {
-  // FIXME(flyashi): fine for 1D scanning, need to implement for 2D scanning
-  return NULL;
+  unsigned char* result = new unsigned char[width_ * height_];
+  // This depends on getRow() honoring its second parameter.
+  for (int y = 0; y < height_; y++) {
+    getRow(y, &result[y * width_]);
+  }
+  return result;
 }
 
 } // namespace

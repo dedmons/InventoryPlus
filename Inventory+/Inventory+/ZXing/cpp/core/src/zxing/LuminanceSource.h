@@ -1,3 +1,4 @@
+// -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
 #ifndef __LUMINANCESOURCE_H__
 #define __LUMINANCESOURCE_H__
 /*
@@ -34,7 +35,7 @@ public:
 
   // Callers take ownership of the returned memory and must call delete [] on it themselves.
   virtual unsigned char* getRow(int y, unsigned char* row) = 0;
-  virtual unsigned char* getMatrix();
+  virtual unsigned char* getMatrix() = 0;
 
   virtual bool isCropSupported() const;
   virtual Ref<LuminanceSource> crop(int left, int top, int width, int height);
@@ -42,6 +43,8 @@ public:
   virtual bool isRotateSupported() const;
   virtual Ref<LuminanceSource> rotateCounterClockwise();
 
+  operator std::string (); // should be const but don't want to make sure a
+                           // large breaking change right now
 };
 
 }

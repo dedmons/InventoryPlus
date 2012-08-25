@@ -1,3 +1,4 @@
+// -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-
 /*
  *  LuminanceSource.cpp
  *  zxing
@@ -17,6 +18,7 @@
  * limitations under the License.
  */
 
+#include <sstream>
 #include <zxing/LuminanceSource.h>
 #include <zxing/common/IllegalArgumentException.h>
 
@@ -28,24 +30,15 @@ LuminanceSource::LuminanceSource() {
 LuminanceSource::~LuminanceSource() {
 }
 
-unsigned char* LuminanceSource::getMatrix() {
-  int width = getWidth();
-  int height =  getHeight();
-  unsigned char* matrix = new unsigned char[width * height];
-  unsigned char* row = new unsigned char[width];
-  for (int y = 0; y < height; y++) {
-    row = getRow(y, row);
-    memcpy(&matrix[y * width], row, width);
-  }
-  delete [] row;
-  return matrix;
-}
-
 bool LuminanceSource::isCropSupported() const {
   return false;
 }
 
 Ref<LuminanceSource> LuminanceSource::crop(int left, int top, int width, int height) {
+  (void)left;
+  (void)top;
+  (void)width;
+  (void)height;
   throw IllegalArgumentException("This luminance source does not support cropping.");
 }
 
@@ -56,5 +49,32 @@ bool LuminanceSource::isRotateSupported() const {
 Ref<LuminanceSource> LuminanceSource::rotateCounterClockwise() {
   throw IllegalArgumentException("This luminance source does not support rotation.");
 }
+
+LuminanceSource::operator std::string() {
+  unsigned char* row = 0;
+  std::ostringstream oss;
+  for (int y = 0; y < getHeight(); y++) {
+    row = getRow(y, row);
+    for (int x = 0; x < getWidth(); x++) {
+      int luminance = row[x] & 0xFF;
+      char c;
+      if (luminance < 0x40) {
+        c = '#';
+      } else if (luminance < 0x80) {
+        c = '+';
+      } else if (luminance < 0xC0) {
+        c = '.';
+      } else {
+        c = ' ';
+      }
+      oss << c;
+    }
+    oss << '\n';
+  }
+  delete [] row;
+  return oss.str();
+}
+
+
 
 }
