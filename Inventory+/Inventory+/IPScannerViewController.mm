@@ -64,7 +64,7 @@
       locationViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Location" image:[UIImage imageNamed:@"Target.png"] tag:1];
         
         UITabBarController *tabBarController = [[UITabBarController alloc] init];
-        tabBarController.title = item.name;
+        tabBarController.title = @"Inventory";
         tabBarController.viewControllers = @[ locationViewController, inventoryViewController ];
         
         UINavigationController *nvc = self.navigationController;
@@ -87,6 +87,7 @@
         
         
         UITabBarController *tabBarController = [[UITabBarController alloc]init];
+      tabBarController.title = @"Inventory";
         
         tabBarController.viewControllers = [NSArray arrayWithObjects:locationViewController,inventoryViewController, nil];
         
