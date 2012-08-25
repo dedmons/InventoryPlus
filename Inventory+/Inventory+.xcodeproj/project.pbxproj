@@ -20,6 +20,8 @@
 		53EFFFA315E97DBA0020A92A /* Target@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFFA115E97DBA0020A92A /* Target@2x.png */; };
 		53EFFFA615E97F140020A92A /* Archive.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFFA415E97F140020A92A /* Archive.png */; };
 		53EFFFA715E97F140020A92A /* Archive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFFA515E97F140020A92A /* Archive@2x.png */; };
+		53EFFFE215E995BC0020A92A /* IPOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EFFFE015E995BC0020A92A /* IPOrderViewController.m */; };
+		53EFFFE315E995BC0020A92A /* IPOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFFE115E995BC0020A92A /* IPOrderViewController.xib */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
 		F753888615E9788600E6FA4E /* IPSupplyLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F753888515E9788600E6FA4E /* IPSupplyLevelView.m */; };
 		F75388CC15E9841400E6FA4E /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956EF15E961B90065A938 /* libZXingWidget.a */; };
@@ -84,6 +86,9 @@
 		53EFFFA115E97DBA0020A92A /* Target@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Target@2x.png"; sourceTree = "<group>"; };
 		53EFFFA415E97F140020A92A /* Archive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Archive.png; sourceTree = "<group>"; };
 		53EFFFA515E97F140020A92A /* Archive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Archive@2x.png"; sourceTree = "<group>"; };
+		53EFFFDF15E995BC0020A92A /* IPOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPOrderViewController.h; sourceTree = "<group>"; };
+		53EFFFE015E995BC0020A92A /* IPOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPOrderViewController.m; sourceTree = "<group>"; };
+		53EFFFE115E995BC0020A92A /* IPOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPOrderViewController.xib; sourceTree = "<group>"; };
 		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F753888415E9788600E6FA4E /* IPSupplyLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSupplyLevelView.h; sourceTree = "<group>"; };
 		F753888515E9788600E6FA4E /* IPSupplyLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSupplyLevelView.m; sourceTree = "<group>"; };
@@ -167,6 +172,9 @@
 				53125C3E15E935C400C0B9CF /* IPItemInventoryManagerViewController.h */,
 				53125C3F15E935C400C0B9CF /* IPItemInventoryManagerViewController.m */,
 				53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */,
+				53EFFFDF15E995BC0020A92A /* IPOrderViewController.h */,
+				53EFFFE015E995BC0020A92A /* IPOrderViewController.m */,
+				53EFFFE115E995BC0020A92A /* IPOrderViewController.xib */,
 			);
 			name = "Manager View Controllers";
 			sourceTree = "<group>";
@@ -355,6 +363,7 @@
 				53EFFFA315E97DBA0020A92A /* Target@2x.png in Resources */,
 				53EFFFA615E97F140020A92A /* Archive.png in Resources */,
 				53EFFFA715E97F140020A92A /* Archive@2x.png in Resources */,
+				53EFFFE315E995BC0020A92A /* IPOrderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +403,7 @@
 				38F44F3C15E9540D00D22637 /* IPInventoryViewController.m in Sources */,
 				38F44F4015E9540D00D22637 /* IPLocationViewController.m in Sources */,
 				F753888615E9788600E6FA4E /* IPSupplyLevelView.m in Sources */,
+				53EFFFE215E995BC0020A92A /* IPOrderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
