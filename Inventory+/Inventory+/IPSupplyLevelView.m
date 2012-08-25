@@ -11,6 +11,7 @@
 @interface IPSupplyLevelView ()
 
 @property (nonatomic, assign) CGFloat currentValue;
+@property (nonatomic, assign) CGFloat step;
 
 @end
 
@@ -61,7 +62,8 @@
 }
 
 - (void)setCurrentAmmount:(NSInteger)currentAmmount {
-    if (currentAmmount != _currentAmmount && currentAmmount >= 0 && currentAmmount <= self.maxAmmount) {
+    if (currentAmmount != _currentAmmount && currentAmmount >= 0) {
+        self.step = abs(_currentAmmount - currentAmmount)/100.0;
         _currentAmmount = currentAmmount;
         [self setNeedsDisplay];
     }
@@ -72,9 +74,6 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    
-//    float round = floorf(self.currentValue * 100)/100.0;
-    
     NSLog(@"Drawing A:%d V:%f ",self.currentAmmount,self.currentValue);
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -84,7 +83,7 @@
     CGFloat alertHeight = boxHeight * ((self.alertAmmount * 1.0)/(self.maxAmmount * 1.0));
     CGFloat desiredHeight = boxHeight * ((self.desiredAmmount * 1.0)/(self.maxAmmount * 1.0));
     
-    if (self.currentValue < self.alertAmmount) {
+    if (self.currentValue < self.alertAmmount || self.currentAmmount > self.maxAmmount) {
         [[UIColor redColor] set];
     } else if (self.currentValue < self.desiredAmmount) {
         [[UIColor yellowColor] set];
@@ -105,12 +104,46 @@
     box.size.height = boxHeight-alertHeight;
     CGContextStrokeRectWithWidth(context, box, 2.0);
     
-    if (self.currentValue < self.currentAmmount-.02) {
-        self.currentValue += 0.02000000000000000000;
+    
+    NSString *s = @"Low";
+    CGPoint p = CGPointMake(4, boxHeight-alertHeight+6);
+    [s drawAtPoint:p
+          forWidth:boxWidth-4
+          withFont:[UIFont systemFontOfSize:9]
+          fontSize:12
+     lineBreakMode:UILineBreakModeCharacterWrap
+baselineAdjustment:UIBaselineAdjustmentNone];
+    
+    s = @"Max";
+    if ( abs(p.y - 6) > 10) {
+        NSLog(@"Max");
+        p.y = 6;
+        [s drawAtPoint:p
+              forWidth:boxWidth-4
+              withFont:[UIFont systemFontOfSize:9]
+              fontSize:12
+         lineBreakMode:UILineBreakModeCharacterWrap
+    baselineAdjustment:UIBaselineAdjustmentNone];
+    }
+    
+    s = @"Normal";
+    if ( abs(p.y - boxHeight-desiredHeight+6) > 10) {
+        NSLog(@"Norm");
+        p.y = boxHeight-desiredHeight+6;
+        [s drawAtPoint:p
+              forWidth:boxWidth-4
+              withFont:[UIFont systemFontOfSize:9]
+              fontSize:12
+         lineBreakMode:UILineBreakModeCharacterWrap
+    baselineAdjustment:UIBaselineAdjustmentNone];
+    }
+    
+    if (self.currentValue < self.currentAmmount-self.step && self.currentValue < self.maxAmmount) {
+        self.currentValue += self.step;
         [self performSelector:@selector(setNeedsDisplay) withObject:nil afterDelay:0.0];
     }
-    else if (self.currentValue > self.currentAmmount+.01) {
-        self.currentValue -= 0.02000000000000000000;
+    else if (self.currentValue > self.currentAmmount+self.step) {
+        self.currentValue -= self.step;
         [self performSelector:@selector(setNeedsDisplay) withObject:nil afterDelay:0.0];
     }
 }

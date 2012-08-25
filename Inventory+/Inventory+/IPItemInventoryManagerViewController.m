@@ -33,6 +33,10 @@
     self.barView.maxAmmount = self.item.capacity;
     self.barView.desiredAmmount = self.item.desiredInventory;
     self.barView.alertAmmount = self.item.alertInventory;
+    self.maxLabel.text = [NSString stringWithFormat:@"%d",self.item.capacity];
+    self.normLabel.text = [NSString stringWithFormat:@"%d",self.item.desiredInventory];
+    self.critLabel.text = [NSString stringWithFormat:@"%d",self.item.alertInventory];
+    self.curLabel.text = [NSString stringWithFormat:@"%d",self.item.currentInventory];
 }
 
 - (void)viewDidAppear:(BOOL)animated{

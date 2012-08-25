@@ -18,6 +18,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *orderButton;
 @property (weak, nonatomic) IBOutlet IPSupplyLevelView *barView;
+@property (weak, nonatomic) IBOutlet UILabel *maxLabel;
+@property (weak, nonatomic) IBOutlet UILabel *normLabel;
+@property (weak, nonatomic) IBOutlet UILabel *critLabel;
+@property (weak, nonatomic) IBOutlet UILabel *curLabel;
 
 - (id)initWithItem:(IPInventoryItem *)item;
 

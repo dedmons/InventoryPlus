@@ -31,7 +31,24 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
   
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editButtonPressed:)];
+  if([IPUser currentUser].role == IPManagerUser)
+      self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editButtonPressed:)];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"IPInventoryItem"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        NSLog(@"found objects");
+        NSLog(@"%@", objects);
+        
+        NSMutableArray *items = [NSMutableArray array];
+        for ( PFObject *parseObject in objects ) {
+            [items addObject:[[IPInventoryItem alloc] initFromParseObject:parseObject]];
+        }
+        
+        self.results = items;
+        
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)editButtonPressed:(UIBarButtonItem *)sender
