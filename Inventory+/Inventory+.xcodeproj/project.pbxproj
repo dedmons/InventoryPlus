@@ -13,6 +13,10 @@
 		53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */; };
 		53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C3F15E935C400C0B9CF /* IPItemInventoryManagerViewController.m */; };
 		53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */; };
+		53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */; };
+		53EFFF5215E93D1F0020A92A /* IPItemSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFF5015E93D1F0020A92A /* IPItemSearchViewController.xib */; };
+		53EFFF5415E93EAC0020A92A /* IPUser.h in Sources */ = {isa = PBXBuildFile; fileRef = F7C955E015E919E90065A938 /* IPUser.h */; };
+		53EFFF5515E93EAC0020A92A /* IPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955E115E919E90065A938 /* IPUser.m */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
@@ -37,6 +41,9 @@
 		53125C3E15E935C400C0B9CF /* IPItemInventoryManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemInventoryManagerViewController.h; sourceTree = "<group>"; };
 		53125C3F15E935C400C0B9CF /* IPItemInventoryManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPItemInventoryManagerViewController.m; sourceTree = "<group>"; };
 		53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPItemInventoryManagerViewController.xib; sourceTree = "<group>"; };
+		53EFFF4E15E93D1F0020A92A /* IPItemSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemSearchViewController.h; sourceTree = "<group>"; };
+		53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPItemSearchViewController.m; sourceTree = "<group>"; };
+		53EFFF5015E93D1F0020A92A /* IPItemSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPItemSearchViewController.xib; sourceTree = "<group>"; };
 		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F7C955B015E913750065A938 /* Inventory+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C955B415E913750065A938 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -137,6 +144,9 @@
 				F7C955C915E913750065A938 /* IPStartViewController.h */,
 				F7C955CA15E913750065A938 /* IPStartViewController.m */,
 				F7C955BB15E913750065A938 /* Supporting Files */,
+				53EFFF4E15E93D1F0020A92A /* IPItemSearchViewController.h */,
+				53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */,
+				53EFFF5015E93D1F0020A92A /* IPItemSearchViewController.xib */,
 			);
 			path = "Inventory+";
 			sourceTree = "<group>";
@@ -208,6 +218,7 @@
 				F7C955BF15E913750065A938 /* InfoPlist.strings in Resources */,
 				F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */,
 				53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */,
+				53EFFF5215E93D1F0020A92A /* IPItemSearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +246,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53EFFF5415E93EAC0020A92A /* IPUser.h in Sources */,
+				53EFFF5515E93EAC0020A92A /* IPUser.m in Sources */,
 				F7C955C115E913750065A938 /* main.m in Sources */,
 				F7C955C515E913750065A938 /* IPAppDelegate.m in Sources */,
 				F7C955CB15E913750065A938 /* IPStartViewController.m in Sources */,
@@ -243,6 +256,7 @@
 				53125C0915E91BEF00C0B9CF /* IPInventoryCategory.m in Sources */,
 				53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */,
 				53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */,
+				53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
