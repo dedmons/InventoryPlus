@@ -24,6 +24,11 @@
 		F7C955C515E913750065A938 /* IPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955C415E913750065A938 /* IPAppDelegate.m */; };
 		F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C955C615E913750065A938 /* MainStoryboard.storyboard */; };
 		F7C955CB15E913750065A938 /* IPStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955CA15E913750065A938 /* IPStartViewController.m */; };
+		F7C9563915E937660065A938 /* IPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955E115E919E90065A938 /* IPUser.m */; };
+		F7C9564015E93ABF0065A938 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9563E15E93ABF0065A938 /* Add.png */; };
+		F7C9564315E93AF40065A938 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564215E93AF40065A938 /* lock.png */; };
+		F7C9564515E943B80065A938 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564415E943B80065A938 /* qr.png */; };
+		F7C9564715E948320065A938 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564615E948320065A938 /* search.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,10 @@
 		F7C955CA15E913750065A938 /* IPStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPStartViewController.m; sourceTree = "<group>"; };
 		F7C955E015E919E90065A938 /* IPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPUser.h; sourceTree = "<group>"; };
 		F7C955E115E919E90065A938 /* IPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPUser.m; sourceTree = "<group>"; };
+		F7C9563E15E93ABF0065A938 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
+		F7C9564215E93AF40065A938 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		F7C9564415E943B80065A938 /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr.png; sourceTree = "<group>"; };
+		F7C9564615E948320065A938 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +135,7 @@
 		F7C955BA15E913750065A938 /* Inventory+ */ = {
 			isa = PBXGroup;
 			children = (
+				F7C9563B15E938D50065A938 /* Images */,
 				53125C0A15E91F8000C0B9CF /* Manager View Controllers */,
 				53125BFF15E91A8700C0B9CF /* Models */,
 				F7C955C315E913750065A938 /* IPAppDelegate.h */,
@@ -150,6 +160,17 @@
 				F7C955C215E913750065A938 /* Inventory+-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7C9563B15E938D50065A938 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				F7C9564615E948320065A938 /* search.png */,
+				F7C9564415E943B80065A938 /* qr.png */,
+				F7C9564215E93AF40065A938 /* lock.png */,
+				F7C9563E15E93ABF0065A938 /* Add.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +299,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -293,6 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -305,6 +328,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -314,6 +338,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
