@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
+		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
+		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
+		F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B815E913750065A938 /* CoreGraphics.framework */; };
+		F7C955BF15E913750065A938 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F7C955BD15E913750065A938 /* InfoPlist.strings */; };
+		F7C955C115E913750065A938 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955C015E913750065A938 /* main.m */; };
+		F7C955C515E913750065A938 /* IPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955C415E913750065A938 /* IPAppDelegate.m */; };
+		F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C955C615E913750065A938 /* MainStoryboard.storyboard */; };
+		F7C955CB15E913750065A938 /* IPStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955CA15E913750065A938 /* IPStartViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		193B2D85D0D248BFBB5D3F72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F7C955B015E913750065A938 /* Inventory+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7C955B415E913750065A938 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F7C955B615E913750065A938 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F7C955B815E913750065A938 /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F7C955BC15E913750065A938 /* Inventory+-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Inventory+-Info.plist"; sourceTree = "<group>"; };
+		F7C955BE15E913750065A938 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F7C955C015E913750065A938 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F7C955C215E913750065A938 /* Inventory+-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Inventory+-Prefix.pch"; sourceTree = "<group>"; };
+		F7C955C315E913750065A938 /* IPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPAppDelegate.h; sourceTree = "<group>"; };
+		F7C955C415E913750065A938 /* IPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPAppDelegate.m; sourceTree = "<group>"; };
+		F7C955C715E913750065A938 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		F7C955C915E913750065A938 /* IPStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPStartViewController.h; sourceTree = "<group>"; };
+		F7C955CA15E913750065A938 /* IPStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPStartViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F7C955AD15E913750065A938 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C955B515E913750065A938 /* UIKit.framework in Frameworks */,
+				F7C955B715E913750065A938 /* Foundation.framework in Frameworks */,
+				F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */,
+				C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F7C955A515E913750065A938 = {
+			isa = PBXGroup;
+			children = (
+				F7C955BA15E913750065A938 /* Inventory+ */,
+				F7C955B315E913750065A938 /* Frameworks */,
+				F7C955B115E913750065A938 /* Products */,
+				7BCAB882D44745CB8FB687CD /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		F7C955B115E913750065A938 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7C955B015E913750065A938 /* Inventory+.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7C955B315E913750065A938 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F7C955B415E913750065A938 /* UIKit.framework */,
+				F7C955B615E913750065A938 /* Foundation.framework */,
+				F7C955B815E913750065A938 /* CoreGraphics.framework */,
+				193B2D85D0D248BFBB5D3F72 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7C955BA15E913750065A938 /* Inventory+ */ = {
+			isa = PBXGroup;
+			children = (
+				F7C955C315E913750065A938 /* IPAppDelegate.h */,
+				F7C955C415E913750065A938 /* IPAppDelegate.m */,
+				F7C955C615E913750065A938 /* MainStoryboard.storyboard */,
+				F7C955C915E913750065A938 /* IPStartViewController.h */,
+				F7C955CA15E913750065A938 /* IPStartViewController.m */,
+				F7C955BB15E913750065A938 /* Supporting Files */,
+			);
+			path = "Inventory+";
+			sourceTree = "<group>";
+		};
+		F7C955BB15E913750065A938 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7C955BC15E913750065A938 /* Inventory+-Info.plist */,
+				F7C955BD15E913750065A938 /* InfoPlist.strings */,
+				F7C955C015E913750065A938 /* main.m */,
+				F7C955C215E913750065A938 /* Inventory+-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7C955AF15E913750065A938 /* Inventory+ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7C955CE15E913750065A938 /* Build configuration list for PBXNativeTarget "Inventory+" */;
+			buildPhases = (
+				F7C955AC15E913750065A938 /* Sources */,
+				F7C955AD15E913750065A938 /* Frameworks */,
+				F7C955AE15E913750065A938 /* Resources */,
+				1D8D2818515F4967B2AEA564 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Inventory+";
+			productName = "Inventory+";
+			productReference = F7C955B015E913750065A938 /* Inventory+.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7C955A715E913750065A938 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IP;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Null Terminators";
+			};
+			buildConfigurationList = F7C955AA15E913750065A938 /* Build configuration list for PBXProject "Inventory+" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F7C955A515E913750065A938;
+			productRefGroup = F7C955B115E913750065A938 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7C955AF15E913750065A938 /* Inventory+ */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F7C955AE15E913750065A938 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C955BF15E913750065A938 /* InfoPlist.strings in Resources */,
+				F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D8D2818515F4967B2AEA564 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F7C955AC15E913750065A938 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7C955C115E913750065A938 /* main.m in Sources */,
+				F7C955C515E913750065A938 /* IPAppDelegate.m in Sources */,
+				F7C955CB15E913750065A938 /* IPStartViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F7C955BD15E913750065A938 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C955BE15E913750065A938 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F7C955C615E913750065A938 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7C955C715E913750065A938 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7C955CC15E913750065A938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F7C955CD15E913750065A938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7C955CF15E913750065A938 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BCAB882D44745CB8FB687CD /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
+				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F7C955D015E913750065A938 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BCAB882D44745CB8FB687CD /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
+				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F7C955AA15E913750065A938 /* Build configuration list for PBXProject "Inventory+" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C955CC15E913750065A938 /* Debug */,
+				F7C955CD15E913750065A938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7C955CE15E913750065A938 /* Build configuration list for PBXNativeTarget "Inventory+" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7C955CF15E913750065A938 /* Debug */,
+				F7C955D015E913750065A938 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7C955A715E913750065A938 /* Project object */;
+}
