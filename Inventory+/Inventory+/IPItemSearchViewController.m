@@ -28,6 +28,18 @@
 {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
+  
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editButtonPressed:)];
+}
+
+- (void)editButtonPressed:(UIBarButtonItem *)sender
+{
+  self.tableView.editing = ! self.tableView.editing;
+  
+  if ( self.tableView.editing )
+    self.navigationItem.rightBarButtonItem.title = @"Done";
+  else
+    self.navigationItem.rightBarButtonItem.title = @"Edit";
 }
 
 - (void)viewDidUnload
@@ -85,6 +97,35 @@
     
     [self.navigationController pushViewController:tabBarController animated:YES];
   }
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return ([IPUser currentUser].role == IPManagerUser);
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return NO;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  PF_MBProgressHUD *hud = [PF_MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  hud.labelText = @"Deleting...";
+  [((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]) deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [PF_MBProgressHUD hideHUDForView:self.view animated:YES];
+    if ( succeeded ) {
+      NSMutableArray *newResults = [self.results mutableCopy];
+      [newResults removeObjectAtIndex:indexPath.row];
+      self.results = newResults;
+      [self.tableView reloadData];
+    }
+    else {
+      [[[UIAlertView alloc] initWithTitle:@"Error" message:error.description delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }
+  }];
+  
 }
 
 #pragma mark - Search bar delegate

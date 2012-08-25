@@ -60,6 +60,17 @@
   [self.parseObject saveInBackgroundWithBlock:block];
 }
 
+- (void)deleteInBackgroundWithBlock:(void (^)(BOOL, NSError *))block
+{
+  [self.parseObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    
+    
+    block(succeeded, error);
+    
+    self.parseObject = nil;
+  }];
+}
+
 #pragma mark - Properties
 
 - (NSString *)name
