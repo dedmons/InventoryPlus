@@ -11,6 +11,8 @@
 		53125C0615E91BA100C0B9CF /* IPInventoryItemLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0515E91BA100C0B9CF /* IPInventoryItemLocation.m */; };
 		53125C0915E91BEF00C0B9CF /* IPInventoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0815E91BEF00C0B9CF /* IPInventoryCategory.m */; };
 		53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */; };
+		53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C3F15E935C400C0B9CF /* IPItemInventoryManagerViewController.m */; };
+		53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
@@ -32,6 +34,9 @@
 		53125C0815E91BEF00C0B9CF /* IPInventoryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInventoryCategory.m; sourceTree = "<group>"; };
 		53125C0B15E9202800C0B9CF /* IPItemAttributesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemAttributesViewController.h; sourceTree = "<group>"; };
 		53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPItemAttributesViewController.m; sourceTree = "<group>"; };
+		53125C3E15E935C400C0B9CF /* IPItemInventoryManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemInventoryManagerViewController.h; sourceTree = "<group>"; };
+		53125C3F15E935C400C0B9CF /* IPItemInventoryManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPItemInventoryManagerViewController.m; sourceTree = "<group>"; };
+		53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPItemInventoryManagerViewController.xib; sourceTree = "<group>"; };
 		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F7C955B015E913750065A938 /* Inventory+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C955B415E913750065A938 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -81,6 +86,9 @@
 			children = (
 				53125C0B15E9202800C0B9CF /* IPItemAttributesViewController.h */,
 				53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */,
+				53125C3E15E935C400C0B9CF /* IPItemInventoryManagerViewController.h */,
+				53125C3F15E935C400C0B9CF /* IPItemInventoryManagerViewController.m */,
+				53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */,
 			);
 			name = "Manager View Controllers";
 			sourceTree = "<group>";
@@ -195,6 +203,7 @@
 			files = (
 				F7C955BF15E913750065A938 /* InfoPlist.strings in Resources */,
 				F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */,
+				53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +238,7 @@
 				53125C0615E91BA100C0B9CF /* IPInventoryItemLocation.m in Sources */,
 				53125C0915E91BEF00C0B9CF /* IPInventoryCategory.m in Sources */,
 				53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */,
+				53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
