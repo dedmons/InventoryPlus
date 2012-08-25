@@ -13,8 +13,6 @@
 		53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */; };
 		53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */; };
 		53EFFF5215E93D1F0020A92A /* IPItemSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFF5015E93D1F0020A92A /* IPItemSearchViewController.xib */; };
-		53EFFF5415E93EAC0020A92A /* IPUser.h in Sources */ = {isa = PBXBuildFile; fileRef = F7C955E015E919E90065A938 /* IPUser.h */; };
-		53EFFF5515E93EAC0020A92A /* IPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955E115E919E90065A938 /* IPUser.m */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
@@ -230,6 +228,10 @@
 				F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */,
 				53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */,
 				53EFFF5215E93D1F0020A92A /* IPItemSearchViewController.xib in Resources */,
+				F7C9564015E93ABF0065A938 /* Add.png in Resources */,
+				F7C9564315E93AF40065A938 /* lock.png in Resources */,
+				F7C9564515E943B80065A938 /* qr.png in Resources */,
+				F7C9564715E948320065A938 /* search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53EFFF5415E93EAC0020A92A /* IPUser.h in Sources */,
-				53EFFF5515E93EAC0020A92A /* IPUser.m in Sources */,
+				F7C9563915E937660065A938 /* IPUser.m in Sources */,
 				F7C955C115E913750065A938 /* main.m in Sources */,
 				F7C955C515E913750065A938 /* IPAppDelegate.m in Sources */,
 				F7C955CB15E913750065A938 /* IPStartViewController.m in Sources */,
