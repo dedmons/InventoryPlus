@@ -101,7 +101,7 @@
         inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:[UIImage imageNamed:@"Archive.png"] tag:1];
         
         UITabBarController *tabBarController = [[UITabBarController alloc] init];
-        tabBarController.title = ((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]).name;
+        tabBarController.title = @"Inventory";
         tabBarController.viewControllers = @[ locationViewController, inventoryViewController ];
         
         [self.navigationController pushViewController:tabBarController animated:YES];
@@ -122,6 +122,7 @@
         
         
         UITabBarController *tabBarController = [[UITabBarController alloc]init];
+      tabBarController.title = @"Inventory";
         
         tabBarController.viewControllers = [NSArray arrayWithObjects:locationViewController,inventoryViewController, nil];
         

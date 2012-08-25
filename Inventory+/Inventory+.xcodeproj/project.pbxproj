@@ -476,11 +476,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BCAB882D44745CB8FB687CD /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nick Watts (SF5MXY678F)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "18A794E2-8017-47C6-AE28-6C665E23ABA9";
 				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes Inventory+/ZXing/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -490,11 +491,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BCAB882D44745CB8FB687CD /* Pods.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Nick Watts (SF5MXY678F)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "18A794E2-8017-47C6-AE28-6C665E23ABA9";
 				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes Inventory+/ZXing/**";
 				WRAPPER_EXTENSION = app;
 			};
