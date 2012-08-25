@@ -27,6 +27,8 @@
 @property (weak, nonatomic) UITextField *aisleField;
 @property (weak, nonatomic) UITextField *sectionField;
 
+@property (assign, nonatomic) BOOL keyboardIsShowing;
+
 @end
 
 @implementation IPItemAttributesViewController
@@ -127,6 +129,11 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  self.keyboardIsShowing = NO;
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+  
 	// Do any additional setup after loading the view.
   self.view = [[UIScrollView alloc] initWithFrame:self.view.bounds];
   self.view.backgroundColor = [UIColor whiteColor];
@@ -249,7 +256,9 @@
 - (void)viewDidUnload
 {
   [super viewDidUnload];
-  // Release any retained subviews of the main view.
+  
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -259,6 +268,13 @@
 
 #pragma mark - Text field delegate
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+  [((UIScrollView *) self.view) setContentOffset:CGPointMake(0, textField.frame.origin.y - 31) animated:YES];
+  
+  return YES;
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
   [textField resignFirstResponder];
@@ -266,6 +282,13 @@
 }
 
 #pragma mark - Text view delegate
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+  [((UIScrollView *) self.view) setContentOffset:CGPointMake(0, textView.frame.origin.y - 31) animated:YES];
+  
+  return YES;
+}
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
@@ -316,6 +339,46 @@
                         otherButtonTitles:nil] show];
     }
   }];
+}
+
+#pragma mark - Keyboard show/hide
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+  if ( self.keyboardIsShowing )
+    return;
+  
+  NSDictionary* info = [notification userInfo];
+  NSValue* aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+  CGSize keyboardSize = [aValue CGRectValue].size;
+  
+  [UIView beginAnimations:@"showKeyboard" context:nil];
+  [UIView setAnimationDuration:0.25];
+  CGRect viewFrame = self.view.frame;
+  viewFrame.size.height -= keyboardSize.height;
+  self.view.frame = viewFrame;
+  [UIView commitAnimations];
+  
+  self.keyboardIsShowing = YES;
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+  if ( ! self.keyboardIsShowing )
+    return;
+  
+  NSDictionary* info = [notification userInfo];
+  NSValue* aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+  CGSize keyboardSize = [aValue CGRectValue].size;
+  
+  [UIView beginAnimations:@"showKeyboard" context:nil];
+  [UIView setAnimationDuration:0.25];
+  CGRect viewFrame = self.view.frame;
+  viewFrame.size.height += keyboardSize.height;
+  self.view.frame = viewFrame;
+  [UIView commitAnimations];
+  
+  self.keyboardIsShowing = NO;
 }
 
 @end
