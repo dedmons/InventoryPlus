@@ -19,6 +19,7 @@
 		53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */; };
 		53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
+		F753888615E9788600E6FA4E /* IPSupplyLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F753888515E9788600E6FA4E /* IPSupplyLevelView.m */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
 		F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B815E913750065A938 /* CoreGraphics.framework */; };
@@ -81,6 +82,8 @@
 		53EFFF4E15E93D1F0020A92A /* IPItemSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemSearchViewController.h; sourceTree = "<group>"; };
 		53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPItemSearchViewController.m; sourceTree = "<group>"; };
 		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F753888415E9788600E6FA4E /* IPSupplyLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSupplyLevelView.h; sourceTree = "<group>"; };
+		F753888515E9788600E6FA4E /* IPSupplyLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSupplyLevelView.m; sourceTree = "<group>"; };
 		F7C955B015E913750065A938 /* Inventory+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C955B415E913750065A938 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7C955B615E913750065A938 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -222,6 +225,8 @@
 				53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */,
 				F7C956BD15E956EE0065A938 /* IPScannerViewController.h */,
 				F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */,
+				F753888415E9788600E6FA4E /* IPSupplyLevelView.h */,
+				F753888515E9788600E6FA4E /* IPSupplyLevelView.m */,
 			);
 			path = "Inventory+";
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				38F44F3C15E9540D00D22637 /* IPInventoryViewController.m in Sources */,
 				38F44F3E15E9540D00D22637 /* IPItemTabBarViewController.m in Sources */,
 				38F44F4015E9540D00D22637 /* IPLocationViewController.m in Sources */,
+				F753888615E9788600E6FA4E /* IPSupplyLevelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
