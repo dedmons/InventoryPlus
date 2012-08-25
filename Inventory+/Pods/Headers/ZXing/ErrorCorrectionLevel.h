@@ -1,1 +1,0 @@
-../../ZXing/cpp/core/src/zxing/qrcode/ErrorCorrectionLevel.h

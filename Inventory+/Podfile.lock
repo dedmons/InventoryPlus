@@ -1,9 +1,5 @@
 PODS:
   - Parse (1.0.39)
-  - ZXing (2.0):
-    - ZXing/ios (= 2.0)
-  - ZXing/ios (2.0)
 
 DEPENDENCIES:
   - Parse
-  - ZXing

@@ -37,6 +37,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="scann" destination="dog-Dg-V4d" eventType="touchUpInside" id="Cfd-fZ-1zs"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E4z-Fu-8eF">
                                 <rect key="frame" x="69" y="172" width="182" height="72"/>
@@ -67,6 +70,21 @@
             </objects>
             <point key="canvasLocation" x="900" y="49"/>
         </scene>
+        <!--Scanner View Controller-->
+        <scene sceneID="WNS-ER-CgX">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ir-2u-i7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="ScannerView" id="Owg-DH-1ZH" customClass="IPScannerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QXp-Kv-QYT">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aw4-Oe-bYN"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="900" y="-551"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="p0l-DU-8y0">
             <objects>
@@ -93,10 +111,14 @@
         <image name="search.png" width="54" height="56"/>
     </resources>
     <classes>
+        <class className="IPScannerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/IPScannerViewController.h"/>
+        </class>
         <class className="IPStartViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/IPStartViewController.h"/>
             <relationships>
                 <relationship kind="action" name="logout:"/>
+                <relationship kind="action" name="scann"/>
                 <relationship kind="outlet" name="addButton" candidateClass="UIButton"/>
             </relationships>
         </class>
