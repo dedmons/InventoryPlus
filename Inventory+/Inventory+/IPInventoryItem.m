@@ -7,27 +7,53 @@
 //
 
 #import "IPInventoryItem.h"
+#import <Parse/Parse.h>
+
+@interface IPInventoryItem()
+
+@property (strong, nonatomic) PFObject *parseObject;
+
+@end
 
 @implementation IPInventoryItem
 
-// Create a new inventory item
 - (id)init
 {
-  self = [PFObject objectWithClassName:@"IPInventoryItem"];
+  self = [super init];
   if ( self ) {
     
   }
   return self;
 }
 
-// Load an existing inventory item from Parse
-- (id)initWithIdentifier:(NSString *)identifier
+- (NSString *)identifier
 {
-  self = [PFObject objectWithoutDataWithClassName:@"IPInventoryItem" objectId:identifier];
-  if ( self ) {
-    
+  return self.parseObject.objectId;
+}
+
+// Load an existing inventory item from Parse
+- (void)loadWithIdentifier:(NSString *)identifier block:(void (^)(BOOL, NSError *))block
+{
+  self.parseObject = [PFObject objectWithoutDataWithClassName:@"IPInventoryItem" objectId:identifier];
+  
+  [self.parseObject fetchInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+    if ( error ) {
+      block(NO, error);
+    }
+    else {
+      // do stuff
+      
+      block(YES, nil);
+    }
+  }];
+}
+
+- (void)saveInBackgroundWithBlock:(void (^)(BOOL, NSError *))block
+{
+  if ( ! self.parseObject ) {
+    self.parseObject = [[PFObject alloc] initWithClassName:@"IPInventoryItem"];
   }
-  return self;
+  [self.parseObject saveInBackgroundWithBlock:block];
 }
 
 @end

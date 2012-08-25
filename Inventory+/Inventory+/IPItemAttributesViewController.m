@@ -249,6 +249,29 @@
   NSLog(@"capacity: %d", self.capacityField.text.integerValue);
   NSLog(@"desired: %d", self.desiredField.text.integerValue);
   NSLog(@"alert: %d", self.alertField.text.integerValue);
+  
+  self.item.name = self.nameInput.text;
+  self.item.description = self.descriptionInput.text;
+  self.item.capacity = self.capacityField.text.integerValue;
+  self.item.desiredInventory = self.desiredField.text.integerValue;
+  self.item.alertInventory = self.alertField.text.integerValue;
+  self.item.currentInventory = self.currentField.text.integerValue;
+  
+  PF_MBProgressHUD *hud = [PF_MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  hud.labelText = @"Saving...";
+  [self.item saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [PF_MBProgressHUD hideHUDForView:self.view animated:YES];
+    if ( succeeded ) {
+      [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
+      [[[UIAlertView alloc] initWithTitle:@"Error"
+                                  message:error.description
+                                 delegate:nil
+                        cancelButtonTitle:@"Ok"
+                        otherButtonTitles:nil] show];
+    }
+  }];
 }
 
 @end

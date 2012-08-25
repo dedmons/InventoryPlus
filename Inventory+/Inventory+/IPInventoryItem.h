@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 Null Terminators. All rights reserved.
 //
 
-#import <Parse/Parse.h>
-#import "IPInventoryItemLocation.h"
-#import "IPInventoryCategory.h"
+#import <Foundation/Foundation.h>
 
-@interface IPInventoryItem : PFObject
+@interface IPInventoryItem : NSObject
+
+@property (copy, readonly, nonatomic) NSString *identifier;
 
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *description;
@@ -20,10 +20,16 @@
 @property (assign, nonatomic) NSUInteger desiredInventory;
 @property (assign, nonatomic) NSUInteger alertInventory;
 
-@property (strong, nonatomic) IPInventoryCategory *category;
+// Category
+@property (copy, nonatomic) NSString *category;
 
-@property (strong, nonatomic) IPInventoryItemLocation *location;
+// Location
+@property (assign, nonatomic) NSInteger aisle;
+@property (assign, nonatomic) NSInteger section;
 
-- (id)initWithIdentifier:(NSString *)identifier;
+- (void)loadWithIdentifier:(NSString *)identifier
+                     block:(void(^)(BOOL succeeded, NSError *error))block;
+
+- (void)saveInBackgroundWithBlock:(void(^)(BOOL succeeded, NSError *error))block;
 
 @end
