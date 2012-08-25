@@ -29,12 +29,17 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
   
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editButtonPressed:)];
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editButtonPressed:)];
 }
 
 - (void)editButtonPressed:(UIBarButtonItem *)sender
 {
   self.tableView.editing = ! self.tableView.editing;
+  
+  if ( self.tableView.editing )
+    self.navigationItem.rightBarButtonItem.title = @"Done";
+  else
+    self.navigationItem.rightBarButtonItem.title = @"Edit";
 }
 
 - (void)viewDidUnload
