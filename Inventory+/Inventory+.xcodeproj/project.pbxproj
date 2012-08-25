@@ -20,7 +20,6 @@
 		F7C955C515E913750065A938 /* IPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955C415E913750065A938 /* IPAppDelegate.m */; };
 		F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C955C615E913750065A938 /* MainStoryboard.storyboard */; };
 		F7C955CB15E913750065A938 /* IPStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955CA15E913750065A938 /* IPStartViewController.m */; };
-		F7C955E215E919E90065A938 /* IPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955E115E919E90065A938 /* IPUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +68,8 @@
 		53125BFF15E91A8700C0B9CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F7C955E015E919E90065A938 /* IPUser.h */,
+				F7C955E115E919E90065A938 /* IPUser.m */,
 				53125C0715E91BEF00C0B9CF /* IPInventoryCategory.h */,
 				53125C0815E91BEF00C0B9CF /* IPInventoryCategory.m */,
 				53125C0415E91BA100C0B9CF /* IPInventoryItemLocation.h */,
@@ -127,8 +128,6 @@
 				F7C955C615E913750065A938 /* MainStoryboard.storyboard */,
 				F7C955C915E913750065A938 /* IPStartViewController.h */,
 				F7C955CA15E913750065A938 /* IPStartViewController.m */,
-				F7C955E015E919E90065A938 /* IPUser.h */,
-				F7C955E115E919E90065A938 /* IPUser.m */,
 				F7C955BB15E913750065A938 /* Supporting Files */,
 			);
 			path = "Inventory+";
