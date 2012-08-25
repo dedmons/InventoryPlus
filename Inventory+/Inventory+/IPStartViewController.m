@@ -11,18 +11,25 @@
 
 @interface IPStartViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+
 @end
 
 @implementation IPStartViewController
+@synthesize addButton;
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.addButton.hidden = YES;
+}
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
     [self checkLoginStatus];
 }
 
@@ -44,9 +51,13 @@
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
     [self dismissViewControllerAnimated:YES completion:nil];
+    if ([IPUser currentUser].role == IPManagerUser) {
+        self.addButton.hidden = NO;
+    }
 }
 
 - (void)viewDidUnload {
+    [self setAddButton:nil];
     [super viewDidUnload];
 }
 
