@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IPStartViewController : UIViewController
+@interface IPStartViewController : UIViewController <PFLogInViewControllerDelegate>
+
+- (IBAction)logout:(id)sender;
 
 @end

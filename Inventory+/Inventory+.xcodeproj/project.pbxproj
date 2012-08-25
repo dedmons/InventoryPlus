@@ -51,6 +51,8 @@
 		F7C955C715E913750065A938 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F7C955C915E913750065A938 /* IPStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPStartViewController.h; sourceTree = "<group>"; };
 		F7C955CA15E913750065A938 /* IPStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPStartViewController.m; sourceTree = "<group>"; };
+		F7C955E015E919E90065A938 /* IPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPUser.h; sourceTree = "<group>"; };
+		F7C955E115E919E90065A938 /* IPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,8 @@
 		53125BFF15E91A8700C0B9CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F7C955E015E919E90065A938 /* IPUser.h */,
+				F7C955E115E919E90065A938 /* IPUser.m */,
 				53125C0715E91BEF00C0B9CF /* IPInventoryCategory.h */,
 				53125C0815E91BEF00C0B9CF /* IPInventoryCategory.m */,
 				53125C0415E91BA100C0B9CF /* IPInventoryItemLocation.h */,
