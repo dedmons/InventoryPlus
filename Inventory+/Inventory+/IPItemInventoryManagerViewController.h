@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IPInventoryItem.h"
+#import "IPSupplyLevelView.h"
 
 @interface IPItemInventoryManagerViewController : UIViewController
 
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIView *inventoryView;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *orderButton;
+@property (weak, nonatomic) IBOutlet IPSupplyLevelView *barView;
 
 - (id)initWithItem:(IPInventoryItem *)item;
 

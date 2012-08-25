@@ -105,12 +105,12 @@
     box.size.height = boxHeight-alertHeight;
     CGContextStrokeRectWithWidth(context, box, 2.0);
     
-    if (self.currentValue < self.currentAmmount-.01) {
-        self.currentValue += 0.01000000000000000000;
+    if (self.currentValue < self.currentAmmount-.02) {
+        self.currentValue += 0.02000000000000000000;
         [self performSelector:@selector(setNeedsDisplay) withObject:nil afterDelay:0.0];
     }
     else if (self.currentValue > self.currentAmmount+.01) {
-        self.currentValue -= 0.01000000000000000000;
+        self.currentValue -= 0.02000000000000000000;
         [self performSelector:@selector(setNeedsDisplay) withObject:nil afterDelay:0.0];
     }
 }

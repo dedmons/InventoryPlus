@@ -67,7 +67,7 @@
 
 -(IBAction)scann {
     NSLog(@"SCAN");
-    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ScannerView"] animated:YES];
+    [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"ScannerView"] animated:NO];
 }
 
 @end

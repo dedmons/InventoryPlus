@@ -7,6 +7,7 @@
 //
 
 #import "IPScannerViewController.h"
+#import "QRCodeReader.h"
 #import "ZXingWidgetController.h"
 #import "IPLocationViewController.h"
 #import "IPInventoryViewController.h"
@@ -15,6 +16,7 @@
 
 @interface IPScannerViewController () <ZXingDelegate>
 
+@property (nonatomic, assign) NSInteger once;
 @end
 
 @implementation IPScannerViewController
@@ -24,10 +26,23 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    self.once = 0;
+}
+
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    ZXingWidgetController *wc = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
-    [self presentViewController:wc animated:YES completion:nil];
+    if (self.once == 0) {
+        ZXingWidgetController *widController = [[ZXingWidgetController alloc] initWithDelegate:self showCancel:YES OneDMode:NO];
+        QRCodeReader* qrcodeReader = [[QRCodeReader alloc] init];
+        NSSet *readers = [[NSSet alloc ] initWithObjects:qrcodeReader,nil];
+        widController.readers = readers;
+        
+        //[self presentModalViewController:widController animated:YES];
+        [self.navigationController presentModalViewController:widController animated:NO];
+        self.once = 1;
+    }
 }
 
 - (void)zxingController:(ZXingWidgetController *)controller didScanResult:(NSString *)result {
@@ -36,30 +51,33 @@
     
     PFObject *obj = [PFObject objectWithoutDataWithClassName:@"IPInventoryItem" objectId:result];
     [obj fetchIfNeeded];
+    IPInventoryItem *item = [[IPInventoryItem alloc] initFromParseObject: obj];
+
     
     if ([IPUser currentUser].role == IPManagerUser) {
         NSLog(@"manager");
-        IPItemInventoryManagerViewController *inventoryViewController = [[IPItemInventoryManagerViewController alloc] initWithItem:((IPInventoryItem *) obj)];
+        IPItemInventoryManagerViewController *inventoryViewController = [[IPItemInventoryManagerViewController alloc] initWithItem:item];
         inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:nil tag:1];
         
         UITabBarController *tabBarController = [[UITabBarController alloc] init];
-        tabBarController.title = ((IPInventoryItem *) obj).name;
+        tabBarController.title = item.name;
         tabBarController.viewControllers = @[ inventoryViewController ];
         
-        [self.navigationController popViewControllerAnimated:NO];
-        [self.navigationController pushViewController:tabBarController animated:YES];
+        UINavigationController *nvc = self.navigationController;
+        [nvc popViewControllerAnimated:NO];
+        [nvc pushViewController:tabBarController animated:YES];
         
     }else{
         NSLog(@"worker");
         IPInventoryViewController *inventoryViewController = [[IPInventoryViewController alloc]initWithNibName:@"IPInventoryViewController" bundle:nil];
         
         inventoryViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Inventory" image:nil tag:1];
-        inventoryViewController.item = ((IPInventoryItem *) obj);
+        inventoryViewController.item = item;
         
         
         IPLocationViewController *locationViewController = [[IPLocationViewController alloc]initWithNibName:@"IPLocationViewController" bundle:nil];
         
-        locationViewController.item = ((IPInventoryItem *) obj);
+        locationViewController.item = item;
         
         locationViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Location" image:nil tag:2];
         
@@ -68,8 +86,9 @@
         
         tabBarController.viewControllers = [NSArray arrayWithObjects:locationViewController,inventoryViewController, nil];
         
-        [self.navigationController popViewControllerAnimated:NO];
-        [self.navigationController pushViewController:tabBarController animated:YES];
+        UINavigationController *nvc = self.navigationController;
+        [nvc popViewControllerAnimated:NO];
+        [nvc pushViewController:tabBarController animated:YES];
         [locationViewController setLabels];
         
         [inventoryViewController setValuesToLabel];

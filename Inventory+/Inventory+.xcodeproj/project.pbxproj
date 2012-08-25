@@ -464,7 +464,7 @@
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes";
+				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes Inventory+/ZXing/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -477,7 +477,7 @@
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes";
+				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes Inventory+/ZXing/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

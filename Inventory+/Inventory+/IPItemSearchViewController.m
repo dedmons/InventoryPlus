@@ -170,6 +170,7 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [searchBar resignFirstResponder];
   PFQuery *categoryQuery = [[PFQuery alloc] initWithClassName:@"IPInventoryItem"];
   [categoryQuery whereKey:@"category" matchesRegex:searchBar.text modifiers:@"i"];
   
