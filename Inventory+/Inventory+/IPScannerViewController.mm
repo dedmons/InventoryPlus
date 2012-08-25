@@ -57,11 +57,15 @@
     if ([IPUser currentUser].role == IPManagerUser) {
         NSLog(@"manager");
         IPItemInventoryManagerViewController *inventoryViewController = [[IPItemInventoryManagerViewController alloc] initWithItem:item];
-        inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:nil tag:1];
+        inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:[UIImage imageNamed:@"Archive.png"] tag:2];
+      
+      IPLocationViewController *locationViewController = [[IPLocationViewController alloc] init];
+      locationViewController.item = item;
+      locationViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Location" image:[UIImage imageNamed:@"Target.png"] tag:1];
         
         UITabBarController *tabBarController = [[UITabBarController alloc] init];
         tabBarController.title = item.name;
-        tabBarController.viewControllers = @[ inventoryViewController ];
+        tabBarController.viewControllers = @[ locationViewController, inventoryViewController ];
         
         UINavigationController *nvc = self.navigationController;
         [nvc popViewControllerAnimated:NO];
@@ -71,7 +75,7 @@
         NSLog(@"worker");
         IPInventoryViewController *inventoryViewController = [[IPInventoryViewController alloc]initWithNibName:@"IPInventoryViewController" bundle:nil];
         
-        inventoryViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Inventory" image:nil tag:1];
+        inventoryViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Inventory" image:[UIImage imageNamed:@"Archive.png"] tag:2];
         inventoryViewController.item = item;
         
         
@@ -79,7 +83,7 @@
         
         locationViewController.item = item;
         
-        locationViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Location" image:nil tag:2];
+        locationViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Location" image:[UIImage imageNamed:@"Target.png"] tag:1];
         
         
         UITabBarController *tabBarController = [[UITabBarController alloc]init];
