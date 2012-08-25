@@ -32,7 +32,33 @@
 		F7C9564315E93AF40065A938 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564215E93AF40065A938 /* lock.png */; };
 		F7C9564515E943B80065A938 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564415E943B80065A938 /* qr.png */; };
 		F7C9564715E948320065A938 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564615E948320065A938 /* search.png */; };
+		F7C956BF15E956EE0065A938 /* IPScannerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */; };
+		F7C956D415E95C8B0065A938 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D315E95C8B0065A938 /* libZXingWidget.a */; };
+		F7C956D615E95E3B0065A938 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D515E95E3B0065A938 /* AudioToolbox.framework */; };
+		F7C956D915E95E460065A938 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D715E95E460065A938 /* AddressBook.framework */; };
+		F7C956DA15E95E460065A938 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D815E95E460065A938 /* AddressBookUI.framework */; };
+		F7C956DD15E95E550065A938 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956DB15E95E540065A938 /* CoreMedia.framework */; };
+		F7C956DE15E95E550065A938 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956DC15E95E550065A938 /* CoreVideo.framework */; };
+		F7C956E015E95E590065A938 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956DF15E95E590065A938 /* AVFoundation.framework */; };
+		F7C956E215E95E6A0065A938 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956E115E95E6A0065A938 /* libiconv.dylib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F7C956EE15E961B90065A938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+		F7C956F015E961B90065A938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9E478C51220C4C300144387;
+			remoteInfo = ZXingTouch;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		193B2D85D0D248BFBB5D3F72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +100,17 @@
 		F7C9564215E93AF40065A938 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		F7C9564415E943B80065A938 /* qr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qr.png; sourceTree = "<group>"; };
 		F7C9564615E948320065A938 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		F7C956BD15E956EE0065A938 /* IPScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPScannerViewController.h; sourceTree = "<group>"; };
+		F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IPScannerViewController.mm; sourceTree = "<group>"; };
+		F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = "Inventory+/ZXing/iphone/ZXingWidget/ZXingWidget.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		F7C956D315E95C8B0065A938 /* libZXingWidget.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZXingWidget.a; path = "Inventory+/ZXing/iphone/ZXingWidget/build/Release-iphoneos/libZXingWidget.a"; sourceTree = "<group>"; };
+		F7C956D515E95E3B0065A938 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F7C956D715E95E460065A938 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		F7C956D815E95E460065A938 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		F7C956DB15E95E540065A938 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F7C956DC15E95E550065A938 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		F7C956DF15E95E590065A938 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F7C956E115E95E6A0065A938 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +118,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C956E215E95E6A0065A938 /* libiconv.dylib in Frameworks */,
+				F7C956E015E95E590065A938 /* AVFoundation.framework in Frameworks */,
+				F7C956DD15E95E550065A938 /* CoreMedia.framework in Frameworks */,
+				F7C956DE15E95E550065A938 /* CoreVideo.framework in Frameworks */,
+				F7C956D915E95E460065A938 /* AddressBook.framework in Frameworks */,
+				F7C956DA15E95E460065A938 /* AddressBookUI.framework in Frameworks */,
+				F7C956D615E95E3B0065A938 /* AudioToolbox.framework in Frameworks */,
+				F7C956D415E95C8B0065A938 /* libZXingWidget.a in Frameworks */,
 				F7C955B515E913750065A938 /* UIKit.framework in Frameworks */,
 				F7C955B715E913750065A938 /* Foundation.framework in Frameworks */,
 				F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */,
@@ -126,6 +171,7 @@
 		F7C955A515E913750065A938 = {
 			isa = PBXGroup;
 			children = (
+				F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */,
 				F7C955BA15E913750065A938 /* Inventory+ */,
 				F7C955B315E913750065A938 /* Frameworks */,
 				F7C955B115E913750065A938 /* Products */,
@@ -144,6 +190,14 @@
 		F7C955B315E913750065A938 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7C956E115E95E6A0065A938 /* libiconv.dylib */,
+				F7C956DF15E95E590065A938 /* AVFoundation.framework */,
+				F7C956DB15E95E540065A938 /* CoreMedia.framework */,
+				F7C956DC15E95E550065A938 /* CoreVideo.framework */,
+				F7C956D715E95E460065A938 /* AddressBook.framework */,
+				F7C956D815E95E460065A938 /* AddressBookUI.framework */,
+				F7C956D515E95E3B0065A938 /* AudioToolbox.framework */,
+				F7C956D315E95C8B0065A938 /* libZXingWidget.a */,
 				F7C955B415E913750065A938 /* UIKit.framework */,
 				F7C955B615E913750065A938 /* Foundation.framework */,
 				F7C955B815E913750065A938 /* CoreGraphics.framework */,
@@ -166,6 +220,8 @@
 				F7C955BB15E913750065A938 /* Supporting Files */,
 				53EFFF4E15E93D1F0020A92A /* IPItemSearchViewController.h */,
 				53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */,
+				F7C956BD15E956EE0065A938 /* IPScannerViewController.h */,
+				F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */,
 			);
 			path = "Inventory+";
 			sourceTree = "<group>";
@@ -190,6 +246,15 @@
 				F7C9563E15E93ABF0065A938 /* Add.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		F7C956EA15E961B90065A938 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7C956EF15E961B90065A938 /* libZXingWidget.a */,
+				F7C956F115E961B90065A938 /* libZXingTouch.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,12 +298,35 @@
 			mainGroup = F7C955A515E913750065A938;
 			productRefGroup = F7C955B115E913750065A938 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F7C956EA15E961B90065A938 /* Products */;
+					ProjectRef = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F7C955AF15E913750065A938 /* Inventory+ */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F7C956EF15E961B90065A938 /* libZXingWidget.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingWidget.a;
+			remoteRef = F7C956EE15E961B90065A938 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7C956F115E961B90065A938 /* libZXingTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingTouch.a;
+			remoteRef = F7C956F015E961B90065A938 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F7C955AE15E913750065A938 /* Resources */ = {
@@ -290,6 +378,7 @@
 				53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */,
 				53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */,
 				53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */,
+				F7C956BF15E956EE0065A938 /* IPScannerViewController.mm in Sources */,
 				38F44F3C15E9540D00D22637 /* IPInventoryViewController.m in Sources */,
 				38F44F3E15E9540D00D22637 /* IPItemTabBarViewController.m in Sources */,
 				38F44F4015E9540D00D22637 /* IPLocationViewController.m in Sources */,
@@ -379,6 +468,7 @@
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,6 +481,7 @@
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

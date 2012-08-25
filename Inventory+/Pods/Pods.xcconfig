@@ -1,8 +1,8 @@
-OTHER_LDFLAGS = -ObjC -liconv -lstdc++ -lz -framework AVFoundation -framework AddressBook -framework AddressBookUI -framework AudioToolbox -framework CFNetwork -framework CoreGraphics -framework CoreMedia -framework CoreVideo -framework ImageIO -framework MobileCoreServices -framework Parse -framework QuartzCore -framework Security -framework SystemConfiguration
-PODS_ROOT = ${SRCROOT}/Pods
-ALWAYS_SEARCH_USER_PATHS = YES
-PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/Parse" "${PODS_ROOT}/BuildHeaders/ZXing"
-PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Parse" "${PODS_ROOT}/Headers/ZXing"
-HEADER_SEARCH_PATHS = ${PODS_ROOT}/ZXing/cpp/core/src/ ${PODS_ROOT}/ZXing/iphone/ZXingWidget/Classes/ ${PODS_HEADERS_SEARCH_PATHS}
 FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/Parse"
+HEADER_SEARCH_PATHS = ${PODS_HEADERS_SEARCH_PATHS}
+OTHER_LDFLAGS = -ObjC -lz -framework AudioToolbox -framework CFNetwork -framework CoreGraphics -framework MobileCoreServices -framework Parse -framework QuartzCore -framework Security -framework SystemConfiguration
 PODS_HEADERS_SEARCH_PATHS = ${PODS_PUBLIC_HEADERS_SEARCH_PATHS}
+PODS_PUBLIC_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/Parse"
+ALWAYS_SEARCH_USER_PATHS = YES
+PODS_ROOT = ${SRCROOT}/Pods
+PODS_BUILD_HEADERS_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/Parse"

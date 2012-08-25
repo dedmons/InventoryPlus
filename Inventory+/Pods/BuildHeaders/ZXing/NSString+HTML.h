@@ -1,1 +1,0 @@
-../../ZXing/iphone/ZXingWidget/Classes/NSString+HTML.h

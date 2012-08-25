@@ -1,1 +1,0 @@
-../../ZXing/cpp/core/src/zxing/datamatrix/detector/CornerPoint.h

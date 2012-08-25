@@ -1,4 +1,3 @@
 platform :ios
 
 pod 'Parse'
-pod 'ZXing'

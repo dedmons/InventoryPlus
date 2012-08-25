@@ -11,5 +11,6 @@
 @interface IPStartViewController : UIViewController <PFLogInViewControllerDelegate>
 
 - (IBAction)logout:(id)sender;
+- (IBAction)scann;
 
 @end
