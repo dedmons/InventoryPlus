@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12B19" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3KD-eX-eky">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="3KD-eX-eky">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
@@ -11,13 +11,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wae-Y2-l4e" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ScannerView" id="Q0x-ys-klb" customClass="IPScannerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d2O-0Y-IcA">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="900" y="-531"/>
+            <point key="canvasLocation" x="1276" y="-645"/>
         </scene>
         <!--Start View Controller-->
         <scene sceneID="1ZY-5W-EUQ">
@@ -28,51 +28,22 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tZf-xe-P2J">
-                                <rect key="frame" x="69" y="301" width="182" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="         Add Item" image="Add.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="2YZ-gM-LBu">
+                                <rect key="frame" x="32" y="70" width="257" height="275"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <segue destination="JDk-vq-REf" kind="push" id="ZKf-gy-cdF"/>
+                                    <outlet property="dataSource" destination="dog-Dg-V4d" id="qMk-Yl-g2g"/>
+                                    <outlet property="delegate" destination="dog-Dg-V4d" id="GEX-Rb-nJ5"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6zV-dY-MAX">
-                                <rect key="frame" x="69" y="50" width="182" height="71"/>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Inventory +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="iTy-fZ-s4i">
+                                <rect key="frame" x="32" y="20" width="257" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="          Scan" image="qr.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="scann" destination="dog-Dg-V4d" eventType="touchUpInside" id="Cfd-fZ-1zs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E4z-Fu-8eF">
-                                <rect key="frame" x="69" y="172" width="182" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="         Search" image="search.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="qxA-iF-B7m" kind="push" id="ksd-IG-mDk"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -84,7 +55,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="tZf-xe-P2J" id="V76-17-gez"/>
+                        <outlet property="tableView" destination="2YZ-gM-LBu" id="kSF-Ke-h8Z"/>
+                        <segue destination="qxA-iF-B7m" kind="push" identifier="StartToSearch" id="Byd-P0-y6v"/>
+                        <segue destination="JDk-vq-REf" kind="push" identifier="StartToNew" id="u1c-9d-IKf"/>
+                        <segue destination="Q0x-ys-klb" kind="push" identifier="StartToScan" id="YYt-an-d5h"/>
                     </connections>
                 </viewController>
             </objects>
@@ -94,7 +68,7 @@
         <scene sceneID="YN9-jf-77c">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="61v-fc-mDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="qxA-iF-B7m" customClass="IPItemSearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchVC" id="qxA-iF-B7m" customClass="IPItemSearchViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3wM-PX-1Ye">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -132,7 +106,7 @@
         <scene sceneID="q3n-Ht-msq">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dR1-a5-h1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="JDk-vq-REf" customClass="IPItemAttributesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewItemVC" id="JDk-vq-REf" customClass="IPItemAttributesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ByT-FN-gUM">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -166,10 +140,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add.png" width="45" height="45"/>
         <image name="lock.png" width="14" height="16"/>
-        <image name="qr.png" width="64" height="64"/>
-        <image name="search.png" width="54" height="56"/>
     </resources>
     <classes>
         <class className="IPItemAttributesViewController" superclassName="UIViewController">
@@ -191,6 +162,7 @@
                 <relationship kind="action" name="logout:"/>
                 <relationship kind="action" name="scann"/>
                 <relationship kind="outlet" name="addButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
     </classes>

@@ -13,4 +13,6 @@
 - (IBAction)logout:(id)sender;
 - (IBAction)scann;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end

@@ -470,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BCAB882D44745CB8FB687CD /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
@@ -483,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BCAB882D44745CB8FB687CD /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
