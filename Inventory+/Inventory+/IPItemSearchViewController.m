@@ -9,6 +9,8 @@
 #import "IPItemSearchViewController.h"
 #import "IPInventoryItem.h"
 #import "IPUser.h"
+#import "IPInventoryViewController.h"
+#import "IPLocationViewController.h"
 #import "IPItemInventoryManagerViewController.h"
 
 @interface IPItemSearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
@@ -85,18 +87,43 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  if ( [IPUser currentUser].role == IPManagerUser ) {
-    
-    IPItemInventoryManagerViewController *inventoryViewController = [[IPItemInventoryManagerViewController alloc] initWithItem:[self.results objectAtIndex:indexPath.row]];
-    inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:nil tag:1];
-    
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.title = ((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]).name;
-    tabBarController.viewControllers = @[ inventoryViewController ];
-    
-    [self.navigationController pushViewController:tabBarController animated:YES];
-  }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if ([IPUser currentUser].role == IPManagerUser) {
+        NSLog(@"manager");
+        IPItemInventoryManagerViewController *inventoryViewController = [[IPItemInventoryManagerViewController alloc] initWithItem:[self.results objectAtIndex:indexPath.row]];
+        inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:nil tag:1];
+        
+        UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        tabBarController.title = ((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]).name;
+        tabBarController.viewControllers = @[ inventoryViewController ];
+        
+        [self.navigationController pushViewController:tabBarController animated:YES];
+              
+    }else{
+        NSLog(@"worker");
+        IPInventoryViewController *inventoryViewController = [[IPInventoryViewController alloc]initWithNibName:@"IPInventoryViewController" bundle:nil];
+        
+        inventoryViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Inventory" image:nil tag:1];
+        inventoryViewController.item = [self.results objectAtIndex:indexPath.row];
+        
+        
+        IPLocationViewController *locationViewController = [[IPLocationViewController alloc]initWithNibName:@"IPLocationViewController" bundle:nil];
+        
+        locationViewController.item = [self.results objectAtIndex:indexPath.row];
+        
+        locationViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Location" image:nil tag:2];
+        
+        
+        UITabBarController *tabBarController = [[UITabBarController alloc]init];
+        
+        tabBarController.viewControllers = [NSArray arrayWithObjects:locationViewController,inventoryViewController, nil];
+        
+        
+        [self.navigationController pushViewController:tabBarController animated:YES];
+        [locationViewController setLabels];
+
+        [inventoryViewController setValuesToLabel];
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
