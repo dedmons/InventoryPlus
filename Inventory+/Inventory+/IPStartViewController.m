@@ -25,15 +25,12 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.addButton.hidden = YES;
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self checkLoginStatus];
-  if ([IPUser currentUser].role == IPManagerUser) {
-    self.addButton.hidden = NO;
-  }
 }
 
 - (void)checkLoginStatus{
@@ -43,6 +40,12 @@
         logInController.fields = PFLogInFieldsLogInButton|PFLogInFieldsUsernameAndPassword|PFLogInFieldsPasswordForgotten;
         [self presentViewController:logInController animated:YES completion:nil];
     } else {
+        if ([IPUser currentUser].role == IPManagerUser) {
+            self.addButton.hidden = NO;
+        } else {
+            self.addButton.hidden = YES;
+        }
+        
         UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"Welcome!"
                                                     message:[NSString stringWithFormat:@"Loged in as %@ with Role %d", [IPUser currentUser].userName, [IPUser currentUser].role]
                                                    delegate:nil
