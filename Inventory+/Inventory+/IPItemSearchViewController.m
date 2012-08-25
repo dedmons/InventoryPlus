@@ -90,12 +90,19 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([IPUser currentUser].role == IPManagerUser) {
         NSLog(@"manager");
+      
+      IPLocationViewController *locationViewController = [[IPLocationViewController alloc]initWithNibName:@"IPLocationViewController" bundle:nil];
+      
+      locationViewController.item = [self.results objectAtIndex:indexPath.row];
+      
+      locationViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Location" image:[UIImage imageNamed:@"Target.png"] tag:2];
+      
         IPItemInventoryManagerViewController *inventoryViewController = [[IPItemInventoryManagerViewController alloc] initWithItem:[self.results objectAtIndex:indexPath.row]];
-        inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:nil tag:1];
+        inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:[UIImage imageNamed:@"Archive.png"] tag:1];
         
         UITabBarController *tabBarController = [[UITabBarController alloc] init];
         tabBarController.title = ((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]).name;
-        tabBarController.viewControllers = @[ inventoryViewController ];
+        tabBarController.viewControllers = @[ locationViewController, inventoryViewController ];
         
         [self.navigationController pushViewController:tabBarController animated:YES];
               
@@ -103,7 +110,7 @@
         NSLog(@"worker");
         IPInventoryViewController *inventoryViewController = [[IPInventoryViewController alloc]initWithNibName:@"IPInventoryViewController" bundle:nil];
         
-        inventoryViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Inventory" image:nil tag:1];
+        inventoryViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Inventory" image:[UIImage imageNamed:@"Archive.png"] tag:1];
         inventoryViewController.item = [self.results objectAtIndex:indexPath.row];
         
         
@@ -111,7 +118,7 @@
         
         locationViewController.item = [self.results objectAtIndex:indexPath.row];
         
-        locationViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Location" image:nil tag:2];
+        locationViewController.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"Location" image:[UIImage imageNamed:@"Target.png"] tag:2];
         
         
         UITabBarController *tabBarController = [[UITabBarController alloc]init];

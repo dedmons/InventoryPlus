@@ -19,6 +19,6 @@
 @property(strong)IPInventoryItem *item;
 
 -(void)setLabels;
-+ (NSInteger)getHeightForText:(NSString *)string OfFont:(UIFont *)font forWidth:(CGFloat)width;
+- (NSInteger)getHeightForText:(NSString *)string OfFont:(UIFont *)font forWidth:(CGFloat)width;
 
 @end
