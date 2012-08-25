@@ -45,13 +45,6 @@
         } else {
             self.addButton.hidden = YES;
         }
-        
-        UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"Welcome!"
-                                                    message:[NSString stringWithFormat:@"Loged in as %@ with Role %d", [IPUser currentUser].userName, [IPUser currentUser].role]
-                                                   delegate:nil
-                                          cancelButtonTitle:@"Thanks"
-                                          otherButtonTitles:nil];
-        [a show];
     }
 }
 
