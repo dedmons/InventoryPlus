@@ -21,6 +21,8 @@
 		53EFFFA615E97F140020A92A /* Archive.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFFA415E97F140020A92A /* Archive.png */; };
 		53EFFFA715E97F140020A92A /* Archive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFFA515E97F140020A92A /* Archive@2x.png */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
+		F753888615E9788600E6FA4E /* IPSupplyLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F753888515E9788600E6FA4E /* IPSupplyLevelView.m */; };
+		F75388CC15E9841400E6FA4E /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956EF15E961B90065A938 /* libZXingWidget.a */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
 		F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B815E913750065A938 /* CoreGraphics.framework */; };
@@ -35,7 +37,6 @@
 		F7C9564515E943B80065A938 /* qr.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564415E943B80065A938 /* qr.png */; };
 		F7C9564715E948320065A938 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564615E948320065A938 /* search.png */; };
 		F7C956BF15E956EE0065A938 /* IPScannerViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */; };
-		F7C956D415E95C8B0065A938 /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D315E95C8B0065A938 /* libZXingWidget.a */; };
 		F7C956D615E95E3B0065A938 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D515E95E3B0065A938 /* AudioToolbox.framework */; };
 		F7C956D915E95E460065A938 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D715E95E460065A938 /* AddressBook.framework */; };
 		F7C956DA15E95E460065A938 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956D815E95E460065A938 /* AddressBookUI.framework */; };
@@ -46,19 +47,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F75388DD15E9845E00E6FA4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D60398D13DF7CAD006F4B51;
+			remoteInfo = ZXingTests;
+		};
 		F7C956EE15E961B90065A938 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = ZXingWidget;
-		};
-		F7C956F015E961B90065A938 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E9E478C51220C4C300144387;
-			remoteInfo = ZXingTouch;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -84,6 +85,8 @@
 		53EFFFA415E97F140020A92A /* Archive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Archive.png; sourceTree = "<group>"; };
 		53EFFFA515E97F140020A92A /* Archive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Archive@2x.png"; sourceTree = "<group>"; };
 		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F753888415E9788600E6FA4E /* IPSupplyLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSupplyLevelView.h; sourceTree = "<group>"; };
+		F753888515E9788600E6FA4E /* IPSupplyLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSupplyLevelView.m; sourceTree = "<group>"; };
 		F7C955B015E913750065A938 /* Inventory+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C955B415E913750065A938 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7C955B615E913750065A938 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F75388CC15E9841400E6FA4E /* libZXingWidget.a in Frameworks */,
 				F7C956E215E95E6A0065A938 /* libiconv.dylib in Frameworks */,
 				F7C956E015E95E590065A938 /* AVFoundation.framework in Frameworks */,
 				F7C956DD15E95E550065A938 /* CoreMedia.framework in Frameworks */,
@@ -128,7 +132,6 @@
 				F7C956D915E95E460065A938 /* AddressBook.framework in Frameworks */,
 				F7C956DA15E95E460065A938 /* AddressBookUI.framework in Frameworks */,
 				F7C956D615E95E3B0065A938 /* AudioToolbox.framework in Frameworks */,
-				F7C956D415E95C8B0065A938 /* libZXingWidget.a in Frameworks */,
 				F7C955B515E913750065A938 /* UIKit.framework in Frameworks */,
 				F7C955B715E913750065A938 /* Foundation.framework in Frameworks */,
 				F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */,
@@ -222,6 +225,8 @@
 				53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */,
 				F7C956BD15E956EE0065A938 /* IPScannerViewController.h */,
 				F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */,
+				F753888415E9788600E6FA4E /* IPSupplyLevelView.h */,
+				F753888515E9788600E6FA4E /* IPSupplyLevelView.m */,
 			);
 			path = "Inventory+";
 			sourceTree = "<group>";
@@ -256,7 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				F7C956EF15E961B90065A938 /* libZXingWidget.a */,
-				F7C956F115E961B90065A938 /* libZXingTouch.a */,
+				F75388DE15E9845E00E6FA4E /* ZXingTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -316,18 +321,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		F75388DE15E9845E00E6FA4E /* ZXingTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ZXingTests.octest;
+			remoteRef = F75388DD15E9845E00E6FA4E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		F7C956EF15E961B90065A938 /* libZXingWidget.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libZXingWidget.a;
 			remoteRef = F7C956EE15E961B90065A938 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F7C956F115E961B90065A938 /* libZXingTouch.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libZXingTouch.a;
-			remoteRef = F7C956F015E961B90065A938 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -388,6 +393,7 @@
 				F7C956BF15E956EE0065A938 /* IPScannerViewController.mm in Sources */,
 				38F44F3C15E9540D00D22637 /* IPInventoryViewController.m in Sources */,
 				38F44F4015E9540D00D22637 /* IPLocationViewController.m in Sources */,
+				F753888615E9788600E6FA4E /* IPSupplyLevelView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,7 +481,7 @@
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes";
+				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes Inventory+/ZXing/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -489,7 +495,7 @@
 				GCC_PREFIX_HEADER = "Inventory+/Inventory+-Prefix.pch";
 				INFOPLIST_FILE = "Inventory+/Inventory+-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes";
+				USER_HEADER_SEARCH_PATHS = "Inventory+/ZXing/iphone/ZXingWidget/Classes Inventory+/ZXing/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

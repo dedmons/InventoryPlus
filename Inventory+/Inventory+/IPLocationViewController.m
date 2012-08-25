@@ -38,7 +38,7 @@
     
     self.descriptionLabel.text = self.item.description;
     
-    NSInteger ht = [self getHeightForText:self.item.description OfFont:[UIFont systemFontOfSize:14]  forWidth:280];
+    NSInteger ht = [IPLocationViewController getHeightForText:self.item.description OfFont:[UIFont systemFontOfSize:14]  forWidth:280];
     
 
     
@@ -80,7 +80,7 @@
 }
 
 
-- (NSInteger)getHeightForText:(NSString *)string OfFont:(UIFont *)font forWidth:(CGFloat)width{
++ (NSInteger)getHeightForText:(NSString *)string OfFont:(UIFont *)font forWidth:(CGFloat)width{
     CGSize constraintSize;
 	
     constraintSize.width = width;

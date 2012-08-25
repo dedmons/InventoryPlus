@@ -30,6 +30,14 @@
 {
   self.nameLabel.text = self.item.name;
   self.descriptionLabel.text = self.item.description;
+    self.barView.maxAmmount = self.item.capacity;
+    self.barView.desiredAmmount = self.item.desiredInventory;
+    self.barView.alertAmmount = self.item.alertInventory;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.barView.currentAmmount = self.item.currentInventory;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

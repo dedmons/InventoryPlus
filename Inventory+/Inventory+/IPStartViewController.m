@@ -45,7 +45,6 @@
         } else {
             self.addButton.hidden = YES;
         }
-
     }
 }
 
