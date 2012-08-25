@@ -1,0 +1,19 @@
+//
+//  IPLocationViewController.h
+//  Inventory+
+//
+//  Created by Akash Mudubagilu on 8/25/12.
+//  Copyright (c) 2012 Null Terminators. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+
+@interface IPLocationViewController : UIViewController
+
+@property(weak)IBOutlet UILabel *nameLabel;
+@property(weak)IBOutlet UILabel *descriptionLabel;
+@property(weak)IBOutlet UILabel *aisleLabel;
+@property(weak)IBOutlet UILabel *sectionLabel;
+
+@end

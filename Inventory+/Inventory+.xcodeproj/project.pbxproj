@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38F44F3C15E9540D00D22637 /* IPInventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F44F3415E9540D00D22637 /* IPInventoryViewController.m */; };
+		38F44F3D15E9540D00D22637 /* IPInventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F44F3515E9540D00D22637 /* IPInventoryViewController.xib */; };
+		38F44F3E15E9540D00D22637 /* IPItemTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F44F3715E9540D00D22637 /* IPItemTabBarViewController.m */; };
+		38F44F3F15E9540D00D22637 /* IPItemTabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F44F3815E9540D00D22637 /* IPItemTabBarViewController.xib */; };
+		38F44F4015E9540D00D22637 /* IPLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F44F3A15E9540D00D22637 /* IPLocationViewController.m */; };
+		38F44F4115E9540D00D22637 /* IPLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38F44F3B15E9540D00D22637 /* IPLocationViewController.xib */; };
 		53125C0315E91A9B00C0B9CF /* IPInventoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0215E91A9B00C0B9CF /* IPInventoryItem.m */; };
 		53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */; };
 		53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C3F15E935C400C0B9CF /* IPItemInventoryManagerViewController.m */; };
@@ -30,6 +36,15 @@
 
 /* Begin PBXFileReference section */
 		193B2D85D0D248BFBB5D3F72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		38F44F3315E9540D00D22637 /* IPInventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInventoryViewController.h; sourceTree = "<group>"; };
+		38F44F3415E9540D00D22637 /* IPInventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInventoryViewController.m; sourceTree = "<group>"; };
+		38F44F3515E9540D00D22637 /* IPInventoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPInventoryViewController.xib; sourceTree = "<group>"; };
+		38F44F3615E9540D00D22637 /* IPItemTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemTabBarViewController.h; sourceTree = "<group>"; };
+		38F44F3715E9540D00D22637 /* IPItemTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPItemTabBarViewController.m; sourceTree = "<group>"; };
+		38F44F3815E9540D00D22637 /* IPItemTabBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPItemTabBarViewController.xib; sourceTree = "<group>"; };
+		38F44F3915E9540D00D22637 /* IPLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPLocationViewController.h; sourceTree = "<group>"; };
+		38F44F3A15E9540D00D22637 /* IPLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPLocationViewController.m; sourceTree = "<group>"; };
+		38F44F3B15E9540D00D22637 /* IPLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPLocationViewController.xib; sourceTree = "<group>"; };
 		53125C0115E91A9B00C0B9CF /* IPInventoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInventoryItem.h; sourceTree = "<group>"; };
 		53125C0215E91A9B00C0B9CF /* IPInventoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInventoryItem.m; sourceTree = "<group>"; };
 		53125C0B15E9202800C0B9CF /* IPItemAttributesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemAttributesViewController.h; sourceTree = "<group>"; };
@@ -90,6 +105,15 @@
 		53125C0A15E91F8000C0B9CF /* Manager View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38F44F3315E9540D00D22637 /* IPInventoryViewController.h */,
+				38F44F3415E9540D00D22637 /* IPInventoryViewController.m */,
+				38F44F3515E9540D00D22637 /* IPInventoryViewController.xib */,
+				38F44F3615E9540D00D22637 /* IPItemTabBarViewController.h */,
+				38F44F3715E9540D00D22637 /* IPItemTabBarViewController.m */,
+				38F44F3815E9540D00D22637 /* IPItemTabBarViewController.xib */,
+				38F44F3915E9540D00D22637 /* IPLocationViewController.h */,
+				38F44F3A15E9540D00D22637 /* IPLocationViewController.m */,
+				38F44F3B15E9540D00D22637 /* IPLocationViewController.xib */,
 				53125C0B15E9202800C0B9CF /* IPItemAttributesViewController.h */,
 				53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */,
 				53125C3E15E935C400C0B9CF /* IPItemInventoryManagerViewController.h */,
@@ -228,6 +252,9 @@
 				F7C9564315E93AF40065A938 /* lock.png in Resources */,
 				F7C9564515E943B80065A938 /* qr.png in Resources */,
 				F7C9564715E948320065A938 /* search.png in Resources */,
+				38F44F3D15E9540D00D22637 /* IPInventoryViewController.xib in Resources */,
+				38F44F3F15E9540D00D22637 /* IPItemTabBarViewController.xib in Resources */,
+				38F44F4115E9540D00D22637 /* IPLocationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +290,9 @@
 				53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */,
 				53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */,
 				53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */,
+				38F44F3C15E9540D00D22637 /* IPInventoryViewController.m in Sources */,
+				38F44F3E15E9540D00D22637 /* IPItemTabBarViewController.m in Sources */,
+				38F44F4015E9540D00D22637 /* IPLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
