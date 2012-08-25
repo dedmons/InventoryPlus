@@ -8,6 +8,8 @@
 
 #import "IPItemSearchViewController.h"
 #import "IPInventoryItem.h"
+#import "IPUser.h"
+#import "IPItemInventoryManagerViewController.h"
 
 @interface IPItemSearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -71,7 +73,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  
+  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  if ( [IPUser currentUser].role == IPManagerUser ) {
+    
+    IPItemInventoryManagerViewController *inventoryViewController = [[IPItemInventoryManagerViewController alloc] initWithItem:[self.results objectAtIndex:indexPath.row]];
+    inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:nil tag:1];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.title = ((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]).name;
+    tabBarController.viewControllers = @[ inventoryViewController ];
+    
+    [self.navigationController pushViewController:tabBarController animated:YES];
+  }
 }
 
 #pragma mark - Search bar delegate

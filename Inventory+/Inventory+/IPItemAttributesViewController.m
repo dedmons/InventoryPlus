@@ -149,6 +149,7 @@
                                nameLabel.frame.origin.y + nameLabel.frame.size.height + 10,
                                self.view.frame.size.width - 20,
                                nameLabel.frame.origin.y + nameLabel.frame.size.height);
+  nameInput.text = self.item.name;
   self.nameInput = nameInput;
   [self.view addSubview:nameInput];
   
@@ -173,6 +174,7 @@
   descriptionInput.layer.borderColor = [[UIColor grayColor] colorWithAlphaComponent:0.5].CGColor;
   descriptionInput.layer.masksToBounds = YES;
   descriptionInput.layer.cornerRadius = 5.0;
+  descriptionInput.text = self.item.description;
   self.descriptionInput = descriptionInput;
   [self.view addSubview:descriptionInput];
   
@@ -207,16 +209,19 @@
   
   UITextField *categoryField = [self makeTextFieldAfterElement:categoryLabel];
   categoryField.keyboardType = UIKeyboardTypeDefault;
+  categoryField.text = self.item.category;
   self.categoryField = categoryField;
   
   UILabel *aisleLabel = [self makeLabelWithText:@"Aisle" afterElement:categoryField];
   
   UITextField *aisleField = [self makeTextFieldAfterElement:aisleLabel];
+  aisleField.text = [NSString stringWithFormat:@"%d", self.item.aisle];
   self.aisleField = aisleField;
   
   UILabel *sectionLabel = [self makeLabelWithText:@"Section" afterElement:aisleField];
   
   UITextField *sectionField = [self makeTextFieldAfterElement:sectionLabel];
+  sectionField.text = [NSString stringWithFormat:@"%d", self.item.section];
   self.sectionField = sectionField;
   
   UISegmentedControl *submitButton = [[UISegmentedControl alloc] initWithItems:@[ @"Submit" ]];
