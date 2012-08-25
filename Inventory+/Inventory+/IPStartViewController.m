@@ -31,6 +31,9 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [self checkLoginStatus];
+  if ([IPUser currentUser].role == IPManagerUser) {
+    self.addButton.hidden = NO;
+  }
 }
 
 - (void)checkLoginStatus{

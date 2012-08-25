@@ -23,18 +23,17 @@
 @property (strong, nonatomic) NSMutableDictionary *stepperFields;
 @property (strong, nonatomic) NSMutableDictionary *steppers;
 
+@property (weak, nonatomic) UITextField *categoryField;
+@property (weak, nonatomic) UITextField *aisleField;
+@property (weak, nonatomic) UITextField *sectionField;
+
 @end
 
 @implementation IPItemAttributesViewController
 
-- (id)init
+- (void)awakeFromNib
 {
-  self = [super initWithNibName:nil bundle:nil];
-  if ( self ) {
-    self.item = [[IPInventoryItem alloc] init];
-    self.title = @"New Item";
-  }
-  return self;
+  self.title = @"New Item";
 }
 
 - (id)initWithItem:(IPInventoryItem *)item
@@ -104,6 +103,23 @@
   textField.returnKeyType = UIReturnKeyDone;
   
   [stepper addTarget:self action:@selector(stepperDidStep:) forControlEvents:UIControlEventValueChanged];
+  
+  return textField;
+}
+
+- (UITextField *)makeTextFieldAfterElement:(UIView *)element
+{
+  UITextField *textField = [[UITextField alloc] initWithFrame:CGRectZero];
+  textField.borderStyle = UITextBorderStyleRoundedRect;
+  [textField sizeToFit];
+  textField.frame = CGRectMake(10,
+                               element.frame.origin.y + element.frame.size.height + 10,
+                               self.view.frame.size.width - 20,
+                               textField.frame.size.height);
+  textField.delegate = self;
+  textField.returnKeyType = UIReturnKeyDone;
+  textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+  [self.view addSubview:textField];
   
   return textField;
 }
@@ -187,6 +203,22 @@
                                                      afterElement:currentLabel];
   self.currentField = currentField;
   
+  UILabel *categoryLabel = [self makeLabelWithText:@"Category" afterElement:currentField];
+  
+  UITextField *categoryField = [self makeTextFieldAfterElement:categoryLabel];
+  categoryField.keyboardType = UIKeyboardTypeDefault;
+  self.categoryField = categoryField;
+  
+  UILabel *aisleLabel = [self makeLabelWithText:@"Aisle" afterElement:categoryField];
+  
+  UITextField *aisleField = [self makeTextFieldAfterElement:aisleLabel];
+  self.aisleField = aisleField;
+  
+  UILabel *sectionLabel = [self makeLabelWithText:@"Section" afterElement:aisleField];
+  
+  UITextField *sectionField = [self makeTextFieldAfterElement:sectionLabel];
+  self.sectionField = sectionField;
+  
   UISegmentedControl *submitButton = [[UISegmentedControl alloc] initWithItems:@[ @"Submit" ]];
   submitButton.momentary = YES;
   submitButton.tintColor = [UIColor greenColor];
@@ -198,7 +230,7 @@
                               forState:UIControlStateNormal];
   [submitButton sizeToFit];
   submitButton.frame = CGRectMake(10,
-                                  currentField.frame.origin.y + currentField.frame.size.height + 10,
+                                  sectionField.frame.origin.y + sectionField.frame.size.height + 10,
                                   self.view.frame.size.width - 20,
                                   submitButton.frame.size.height);
   [self.view addSubview:submitButton];
@@ -250,12 +282,19 @@
   NSLog(@"desired: %d", self.desiredField.text.integerValue);
   NSLog(@"alert: %d", self.alertField.text.integerValue);
   
+  if ( ! self.item )
+    self.item = [[IPInventoryItem alloc] init];
+  
   self.item.name = self.nameInput.text;
   self.item.description = self.descriptionInput.text;
   self.item.capacity = self.capacityField.text.integerValue;
   self.item.desiredInventory = self.desiredField.text.integerValue;
   self.item.alertInventory = self.alertField.text.integerValue;
   self.item.currentInventory = self.currentField.text.integerValue;
+  
+  self.item.category = self.categoryField.text;
+  self.item.aisle = self.aisleField.text.integerValue;
+  self.item.section = self.sectionField.text.integerValue;
   
   PF_MBProgressHUD *hud = [PF_MBProgressHUD showHUDAddedTo:self.view animated:YES];
   hud.labelText = @"Saving...";

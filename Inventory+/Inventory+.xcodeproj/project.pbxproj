@@ -12,7 +12,6 @@
 		53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C3F15E935C400C0B9CF /* IPItemInventoryManagerViewController.m */; };
 		53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */; };
 		53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */; };
-		53EFFF5215E93D1F0020A92A /* IPItemSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53EFFF5015E93D1F0020A92A /* IPItemSearchViewController.xib */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
@@ -40,7 +39,6 @@
 		53125C4015E935C400C0B9CF /* IPItemInventoryManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPItemInventoryManagerViewController.xib; sourceTree = "<group>"; };
 		53EFFF4E15E93D1F0020A92A /* IPItemSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemSearchViewController.h; sourceTree = "<group>"; };
 		53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPItemSearchViewController.m; sourceTree = "<group>"; };
-		53EFFF5015E93D1F0020A92A /* IPItemSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IPItemSearchViewController.xib; sourceTree = "<group>"; };
 		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F7C955B015E913750065A938 /* Inventory+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C955B415E913750065A938 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -144,7 +142,6 @@
 				F7C955BB15E913750065A938 /* Supporting Files */,
 				53EFFF4E15E93D1F0020A92A /* IPItemSearchViewController.h */,
 				53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */,
-				53EFFF5015E93D1F0020A92A /* IPItemSearchViewController.xib */,
 			);
 			path = "Inventory+";
 			sourceTree = "<group>";
@@ -227,7 +224,6 @@
 				F7C955BF15E913750065A938 /* InfoPlist.strings in Resources */,
 				F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */,
 				53125C4215E935C400C0B9CF /* IPItemInventoryManagerViewController.xib in Resources */,
-				53EFFF5215E93D1F0020A92A /* IPItemSearchViewController.xib in Resources */,
 				F7C9564015E93ABF0065A938 /* Add.png in Resources */,
 				F7C9564315E93AF40065A938 /* lock.png in Resources */,
 				F7C9564515E943B80065A938 /* qr.png in Resources */,

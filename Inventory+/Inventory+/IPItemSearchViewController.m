@@ -7,6 +7,7 @@
 //
 
 #import "IPItemSearchViewController.h"
+#import "IPInventoryItem.h"
 
 @interface IPItemSearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -16,13 +17,9 @@
 
 @implementation IPItemSearchViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (void)awakeFromNib
 {
-  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-  if (self) {
-    // Custom initialization
-  }
-  return self;
+  self.title = @"Search";
 }
 
 - (void)viewDidLoad
@@ -58,6 +55,18 @@
     return 0;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"resultCell"];
+  if ( ! cell ) {
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"resultCell"];
+  }
+  
+  cell.textLabel.text = ((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]).name;
+  
+  return cell;
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -74,17 +83,30 @@
 
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
+  [searchBar resignFirstResponder];
   [searchBar setShowsCancelButton:NO animated:YES];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
-  PFQuery *query = [[PFQuery alloc] initWithClassName:@"IPInventoryItem"];
-  [query whereKey:@"category" containsString:searchBar.text];
+  PFQuery *categoryQuery = [[PFQuery alloc] initWithClassName:@"IPInventoryItem"];
+  [categoryQuery whereKey:@"category" matchesRegex:searchBar.text modifiers:@"i"];
+  
+  PFQuery *nameQuery = [[PFQuery alloc] initWithClassName:@"IPInventoryItem"];
+  [nameQuery whereKey:@"name" matchesRegex:searchBar.text modifiers:@"i"];
+  
+  PFQuery *query = [PFQuery orQueryWithSubqueries:@[ categoryQuery, nameQuery ]];
   
   [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
     NSLog(@"found objects");
     NSLog(@"%@", objects);
+    
+    NSMutableArray *items = [NSMutableArray array];
+    for ( PFObject *parseObject in objects ) {
+      [items addObject:[[IPInventoryItem alloc] initFromParseObject:parseObject]];
+    }
+    
+    self.results = items;
     
     [self.tableView reloadData];
   }];
