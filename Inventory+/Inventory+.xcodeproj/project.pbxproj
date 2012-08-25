@@ -10,6 +10,7 @@
 		53125C0315E91A9B00C0B9CF /* IPInventoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0215E91A9B00C0B9CF /* IPInventoryItem.m */; };
 		53125C0615E91BA100C0B9CF /* IPInventoryItemLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0515E91BA100C0B9CF /* IPInventoryItemLocation.m */; };
 		53125C0915E91BEF00C0B9CF /* IPInventoryCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0815E91BEF00C0B9CF /* IPInventoryCategory.m */; };
+		53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */; };
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
@@ -29,6 +30,8 @@
 		53125C0515E91BA100C0B9CF /* IPInventoryItemLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInventoryItemLocation.m; sourceTree = "<group>"; };
 		53125C0715E91BEF00C0B9CF /* IPInventoryCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInventoryCategory.h; sourceTree = "<group>"; };
 		53125C0815E91BEF00C0B9CF /* IPInventoryCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPInventoryCategory.m; sourceTree = "<group>"; };
+		53125C0B15E9202800C0B9CF /* IPItemAttributesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPItemAttributesViewController.h; sourceTree = "<group>"; };
+		53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPItemAttributesViewController.m; sourceTree = "<group>"; };
 		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F7C955B015E913750065A938 /* Inventory+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C955B415E913750065A938 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -73,6 +76,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		53125C0A15E91F8000C0B9CF /* Manager View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53125C0B15E9202800C0B9CF /* IPItemAttributesViewController.h */,
+				53125C0C15E9202800C0B9CF /* IPItemAttributesViewController.m */,
+			);
+			name = "Manager View Controllers";
+			sourceTree = "<group>";
+		};
 		F7C955A515E913750065A938 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +117,7 @@
 		F7C955BA15E913750065A938 /* Inventory+ */ = {
 			isa = PBXGroup;
 			children = (
+				53125C0A15E91F8000C0B9CF /* Manager View Controllers */,
 				53125BFF15E91A8700C0B9CF /* Models */,
 				F7C955C315E913750065A938 /* IPAppDelegate.h */,
 				F7C955C415E913750065A938 /* IPAppDelegate.m */,
@@ -215,6 +228,7 @@
 				53125C0315E91A9B00C0B9CF /* IPInventoryItem.m in Sources */,
 				53125C0615E91BA100C0B9CF /* IPInventoryItemLocation.m in Sources */,
 				53125C0915E91BEF00C0B9CF /* IPInventoryCategory.m in Sources */,
+				53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
