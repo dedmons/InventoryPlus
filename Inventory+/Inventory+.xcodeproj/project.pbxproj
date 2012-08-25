@@ -21,7 +21,7 @@
 		F7C955C115E913750065A938 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955C015E913750065A938 /* main.m */; };
 		F7C955C515E913750065A938 /* IPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955C415E913750065A938 /* IPAppDelegate.m */; };
 		F7C955C815E913750065A938 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C955C615E913750065A938 /* MainStoryboard.storyboard */; };
-		F7C955CB15E913750065A938 /* IPStartViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F7C955CA15E913750065A938 /* IPStartViewController.mm */; };
+		F7C955CB15E913750065A938 /* IPStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955CA15E913750065A938 /* IPStartViewController.m */; };
 		F7C9563915E937660065A938 /* IPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7C955E115E919E90065A938 /* IPUser.m */; };
 		F7C9564015E93ABF0065A938 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9563E15E93ABF0065A938 /* Add.png */; };
 		F7C9564315E93AF40065A938 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = F7C9564215E93AF40065A938 /* lock.png */; };
@@ -54,7 +54,7 @@
 		F7C955C415E913750065A938 /* IPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPAppDelegate.m; sourceTree = "<group>"; };
 		F7C955C715E913750065A938 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		F7C955C915E913750065A938 /* IPStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPStartViewController.h; sourceTree = "<group>"; };
-		F7C955CA15E913750065A938 /* IPStartViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IPStartViewController.mm; sourceTree = "<group>"; };
+		F7C955CA15E913750065A938 /* IPStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IPStartViewController.m; sourceTree = "<group>"; };
 		F7C955E015E919E90065A938 /* IPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPUser.h; sourceTree = "<group>"; };
 		F7C955E115E919E90065A938 /* IPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPUser.m; sourceTree = "<group>"; };
 		F7C9563E15E93ABF0065A938 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				F7C955C415E913750065A938 /* IPAppDelegate.m */,
 				F7C955C615E913750065A938 /* MainStoryboard.storyboard */,
 				F7C955C915E913750065A938 /* IPStartViewController.h */,
-				F7C955CA15E913750065A938 /* IPStartViewController.mm */,
+				F7C955CA15E913750065A938 /* IPStartViewController.m */,
 				F7C955BB15E913750065A938 /* Supporting Files */,
 				53EFFF4E15E93D1F0020A92A /* IPItemSearchViewController.h */,
 				53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */,
@@ -262,7 +262,7 @@
 				F7C9563915E937660065A938 /* IPUser.m in Sources */,
 				F7C955C115E913750065A938 /* main.m in Sources */,
 				F7C955C515E913750065A938 /* IPAppDelegate.m in Sources */,
-				F7C955CB15E913750065A938 /* IPStartViewController.mm in Sources */,
+				F7C955CB15E913750065A938 /* IPStartViewController.m in Sources */,
 				53125C0315E91A9B00C0B9CF /* IPInventoryItem.m in Sources */,
 				53125C0D15E9202800C0B9CF /* IPItemAttributesViewController.m in Sources */,
 				53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */,
