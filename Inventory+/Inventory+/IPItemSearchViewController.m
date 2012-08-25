@@ -11,7 +11,7 @@
 #import "IPUser.h"
 #import "IPInventoryViewController.h"
 #import "IPLocationViewController.h"
-
+#import "IPItemInventoryManagerViewController.h"
 
 @interface IPItemSearchViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -30,6 +30,18 @@
 {
   [super viewDidLoad];
   // Do any additional setup after loading the view from its nib.
+  
+  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStyleBordered target:self action:@selector(editButtonPressed:)];
+}
+
+- (void)editButtonPressed:(UIBarButtonItem *)sender
+{
+  self.tableView.editing = ! self.tableView.editing;
+  
+  if ( self.tableView.editing )
+    self.navigationItem.rightBarButtonItem.title = @"Done";
+  else
+    self.navigationItem.rightBarButtonItem.title = @"Edit";
 }
 
 - (void)viewDidUnload
@@ -75,9 +87,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if ([IPUser currentUser].role == IPManagerUser) {
         NSLog(@"manager");
+        IPItemInventoryManagerViewController *inventoryViewController = [[IPItemInventoryManagerViewController alloc] initWithItem:[self.results objectAtIndex:indexPath.row]];
+        inventoryViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Inventory" image:nil tag:1];
         
+        UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        tabBarController.title = ((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]).name;
+        tabBarController.viewControllers = @[ inventoryViewController ];
+        
+        [self.navigationController pushViewController:tabBarController animated:YES];
               
     }else{
         NSLog(@"worker");
@@ -104,7 +124,34 @@
 
         [inventoryViewController setValuesToLabel];
     }
+}
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return ([IPUser currentUser].role == IPManagerUser);
+}
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  return NO;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+  PF_MBProgressHUD *hud = [PF_MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  hud.labelText = @"Deleting...";
+  [((IPInventoryItem *) [self.results objectAtIndex:indexPath.row]) deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [PF_MBProgressHUD hideHUDForView:self.view animated:YES];
+    if ( succeeded ) {
+      NSMutableArray *newResults = [self.results mutableCopy];
+      [newResults removeObjectAtIndex:indexPath.row];
+      self.results = newResults;
+      [self.tableView reloadData];
+    }
+    else {
+      [[[UIAlertView alloc] initWithTitle:@"Error" message:error.description delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }
+  }];
   
 }
 

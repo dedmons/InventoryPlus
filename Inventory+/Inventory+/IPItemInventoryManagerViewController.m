@@ -7,6 +7,7 @@
 //
 
 #import "IPItemInventoryManagerViewController.h"
+#import "IPItemAttributesViewController.h"
 
 @interface IPItemInventoryManagerViewController ()
 
@@ -25,25 +26,20 @@
   return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-  [super viewDidLoad];
-  // Do any additional setup after loading the view from its nib.
-  
   self.nameLabel.text = self.item.name;
   self.descriptionLabel.text = self.item.description;
-}
-
-- (void)viewDidUnload
-{
-  [super viewDidUnload];
-  // Release any retained subviews of the main view.
-  // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
   return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)editButtonPressed:(UIButton *)sender
+{
+  [self.navigationController pushViewController:[[IPItemAttributesViewController alloc] initWithItem:self.item] animated:YES];
 }
 
 @end

@@ -1,1 +1,0 @@
-../../ZXing/cpp/core/src/zxing/multi/qrcode/QRCodeMultiReader.h

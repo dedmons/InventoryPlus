@@ -19,4 +19,6 @@
 
 - (id)initWithItem:(IPInventoryItem *)item;
 
+- (IBAction)editButtonPressed:(UIButton *)sender;
+
 @end

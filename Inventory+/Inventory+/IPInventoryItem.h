@@ -34,4 +34,6 @@
 
 - (void)saveInBackgroundWithBlock:(void(^)(BOOL succeeded, NSError *error))block;
 
+- (void)deleteInBackgroundWithBlock:(void(^)(BOOL succeeded, NSError *error))block;
+
 @end

@@ -27,6 +27,8 @@
 @property (weak, nonatomic) UITextField *aisleField;
 @property (weak, nonatomic) UITextField *sectionField;
 
+@property (assign, nonatomic) BOOL keyboardIsShowing;
+
 @end
 
 @implementation IPItemAttributesViewController
@@ -127,6 +129,11 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
+  
+  self.keyboardIsShowing = NO;
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+  
 	// Do any additional setup after loading the view.
   self.view = [[UIScrollView alloc] initWithFrame:self.view.bounds];
   self.view.backgroundColor = [UIColor whiteColor];
@@ -149,6 +156,7 @@
                                nameLabel.frame.origin.y + nameLabel.frame.size.height + 10,
                                self.view.frame.size.width - 20,
                                nameLabel.frame.origin.y + nameLabel.frame.size.height);
+  nameInput.text = self.item.name;
   self.nameInput = nameInput;
   [self.view addSubview:nameInput];
   
@@ -173,6 +181,7 @@
   descriptionInput.layer.borderColor = [[UIColor grayColor] colorWithAlphaComponent:0.5].CGColor;
   descriptionInput.layer.masksToBounds = YES;
   descriptionInput.layer.cornerRadius = 5.0;
+  descriptionInput.text = self.item.description;
   self.descriptionInput = descriptionInput;
   [self.view addSubview:descriptionInput];
   
@@ -207,16 +216,19 @@
   
   UITextField *categoryField = [self makeTextFieldAfterElement:categoryLabel];
   categoryField.keyboardType = UIKeyboardTypeDefault;
+  categoryField.text = self.item.category;
   self.categoryField = categoryField;
   
   UILabel *aisleLabel = [self makeLabelWithText:@"Aisle" afterElement:categoryField];
   
   UITextField *aisleField = [self makeTextFieldAfterElement:aisleLabel];
+  aisleField.text = [NSString stringWithFormat:@"%d", self.item.aisle];
   self.aisleField = aisleField;
   
   UILabel *sectionLabel = [self makeLabelWithText:@"Section" afterElement:aisleField];
   
   UITextField *sectionField = [self makeTextFieldAfterElement:sectionLabel];
+  sectionField.text = [NSString stringWithFormat:@"%d", self.item.section];
   self.sectionField = sectionField;
   
   UISegmentedControl *submitButton = [[UISegmentedControl alloc] initWithItems:@[ @"Submit" ]];
@@ -244,7 +256,9 @@
 - (void)viewDidUnload
 {
   [super viewDidUnload];
-  // Release any retained subviews of the main view.
+  
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+  [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -254,6 +268,13 @@
 
 #pragma mark - Text field delegate
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+  [((UIScrollView *) self.view) setContentOffset:CGPointMake(0, textField.frame.origin.y - 31) animated:YES];
+  
+  return YES;
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
   [textField resignFirstResponder];
@@ -261,6 +282,13 @@
 }
 
 #pragma mark - Text view delegate
+
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView
+{
+  [((UIScrollView *) self.view) setContentOffset:CGPointMake(0, textView.frame.origin.y - 31) animated:YES];
+  
+  return YES;
+}
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
@@ -311,6 +339,46 @@
                         otherButtonTitles:nil] show];
     }
   }];
+}
+
+#pragma mark - Keyboard show/hide
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+  if ( self.keyboardIsShowing )
+    return;
+  
+  NSDictionary* info = [notification userInfo];
+  NSValue* aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+  CGSize keyboardSize = [aValue CGRectValue].size;
+  
+  [UIView beginAnimations:@"showKeyboard" context:nil];
+  [UIView setAnimationDuration:0.25];
+  CGRect viewFrame = self.view.frame;
+  viewFrame.size.height -= keyboardSize.height;
+  self.view.frame = viewFrame;
+  [UIView commitAnimations];
+  
+  self.keyboardIsShowing = YES;
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+  if ( ! self.keyboardIsShowing )
+    return;
+  
+  NSDictionary* info = [notification userInfo];
+  NSValue* aValue = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+  CGSize keyboardSize = [aValue CGRectValue].size;
+  
+  [UIView beginAnimations:@"showKeyboard" context:nil];
+  [UIView setAnimationDuration:0.25];
+  CGRect viewFrame = self.view.frame;
+  viewFrame.size.height += keyboardSize.height;
+  self.view.frame = viewFrame;
+  [UIView commitAnimations];
+  
+  self.keyboardIsShowing = NO;
 }
 
 @end
