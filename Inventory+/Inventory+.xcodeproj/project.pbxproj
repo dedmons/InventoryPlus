@@ -43,6 +43,23 @@
 		F7C956E215E95E6A0065A938 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956E115E95E6A0065A938 /* libiconv.dylib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F7C956EE15E961B90065A938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = ZXingWidget;
+		};
+		F7C956F015E961B90065A938 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9E478C51220C4C300144387;
+			remoteInfo = ZXingTouch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		193B2D85D0D248BFBB5D3F72 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F44F3315E9540D00D22637 /* IPInventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPInventoryViewController.h; sourceTree = "<group>"; };
@@ -86,7 +103,7 @@
 		F7C956BD15E956EE0065A938 /* IPScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPScannerViewController.h; sourceTree = "<group>"; };
 		F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IPScannerViewController.mm; sourceTree = "<group>"; };
 		F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZXingWidget.xcodeproj; path = "Inventory+/ZXing/iphone/ZXingWidget/ZXingWidget.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		F7C956D315E95C8B0065A938 /* libZXingWidget.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libZXingWidget.a; path = "Inventory+/ZXing/iphone/ZXingWidget/build/Release-iphoneos/libZXingWidget.a"; sourceTree = "<group>"; };
+		F7C956D315E95C8B0065A938 /* libZXingWidget.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libZXingWidget.a; path = "Inventory+/ZXing/iphone/ZXingWidget/build/Release-iphoneos/libZXingWidget.a"; sourceTree = "<group>"; };
 		F7C956D515E95E3B0065A938 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		F7C956D715E95E460065A938 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		F7C956D815E95E460065A938 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -203,7 +220,6 @@
 				F7C955BB15E913750065A938 /* Supporting Files */,
 				53EFFF4E15E93D1F0020A92A /* IPItemSearchViewController.h */,
 				53EFFF4F15E93D1F0020A92A /* IPItemSearchViewController.m */,
-				53EFFF5015E93D1F0020A92A /* IPItemSearchViewController.xib */,
 				F7C956BD15E956EE0065A938 /* IPScannerViewController.h */,
 				F7C956BE15E956EE0065A938 /* IPScannerViewController.mm */,
 			);
@@ -230,6 +246,15 @@
 				F7C9563E15E93ABF0065A938 /* Add.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		F7C956EA15E961B90065A938 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7C956EF15E961B90065A938 /* libZXingWidget.a */,
+				F7C956F115E961B90065A938 /* libZXingTouch.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,12 +298,35 @@
 			mainGroup = F7C955A515E913750065A938;
 			productRefGroup = F7C955B115E913750065A938 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F7C956EA15E961B90065A938 /* Products */;
+					ProjectRef = F7C956C515E95BDE0065A938 /* ZXingWidget.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F7C955AF15E913750065A938 /* Inventory+ */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F7C956EF15E961B90065A938 /* libZXingWidget.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingWidget.a;
+			remoteRef = F7C956EE15E961B90065A938 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F7C956F115E961B90065A938 /* libZXingTouch.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libZXingTouch.a;
+			remoteRef = F7C956F015E961B90065A938 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F7C955AE15E913750065A938 /* Resources */ = {
@@ -331,6 +379,9 @@
 				53125C4115E935C400C0B9CF /* IPItemInventoryManagerViewController.m in Sources */,
 				53EFFF5115E93D1F0020A92A /* IPItemSearchViewController.m in Sources */,
 				F7C956BF15E956EE0065A938 /* IPScannerViewController.mm in Sources */,
+				38F44F3C15E9540D00D22637 /* IPInventoryViewController.m in Sources */,
+				38F44F3E15E9540D00D22637 /* IPItemTabBarViewController.m in Sources */,
+				38F44F4015E9540D00D22637 /* IPLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
