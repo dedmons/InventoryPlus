@@ -26,5 +26,6 @@
 - (id)initWithItem:(IPInventoryItem *)item;
 
 - (IBAction)editButtonPressed:(UIButton *)sender;
+- (IBAction)orderButtonPressed:(UIButton *)sender;
 
 @end

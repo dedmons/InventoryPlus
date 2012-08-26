@@ -8,6 +8,7 @@
 
 #import "IPItemInventoryManagerViewController.h"
 #import "IPItemAttributesViewController.h"
+#import "IPOrderViewController.h"
 
 @interface IPItemInventoryManagerViewController ()
 
@@ -52,6 +53,11 @@
 - (void)editButtonPressed:(UIButton *)sender
 {
   [self.navigationController pushViewController:[[IPItemAttributesViewController alloc] initWithItem:self.item] animated:YES];
+}
+
+- (void)orderButtonPressed:(UIButton *)sender
+{
+  [self.navigationController pushViewController:[[IPOrderViewController alloc] initWithItem:self.item] animated:YES];
 }
 
 @end
