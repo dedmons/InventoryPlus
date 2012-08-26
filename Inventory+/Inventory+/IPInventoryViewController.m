@@ -34,6 +34,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self setValuesToLabel];
+    self.view.backgroundColor = [UIColor colorWithRed:.48 green:.48 blue:.48 alpha:1.0];
+
 }
 
 -(void)setValuesToLabel{

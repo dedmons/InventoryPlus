@@ -38,6 +38,9 @@
     self.normLabel.text = [NSString stringWithFormat:@"%d",self.item.desiredInventory];
     self.critLabel.text = [NSString stringWithFormat:@"%d",self.item.alertInventory];
     self.curLabel.text = [NSString stringWithFormat:@"%d",self.item.currentInventory];
+    self.view.backgroundColor = [UIColor colorWithRed:.48 green:.48 blue:.48 alpha:1.0];
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{

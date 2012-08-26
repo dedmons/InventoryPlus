@@ -57,6 +57,8 @@
                            element.frame.origin.y + element.frame.size.height + 10,
                            self.view.frame.size.width - 20,
                            label.frame.size.height);
+    label.backgroundColor = [UIColor colorWithRed:.48 green:.48 blue:.48 alpha:0.0];
+
   [self.view addSubview:label];
   
   return label;
@@ -130,13 +132,14 @@
 {
   [super viewDidLoad];
   
+//    [[UILabel appearanceWhenContainedIn:self.view.class, nil] setBackgroundColor:[UIColor colorWithRed:.48 green:.48 blue:.48 alpha:1.0]];
+    
   self.keyboardIsShowing = NO;
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
   
 	// Do any additional setup after loading the view.
   self.view = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-  self.view.backgroundColor = [UIColor whiteColor];
   
   UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectZero];
   nameLabel.text = @"Name:";
@@ -145,6 +148,7 @@
                                10,
                                self.view.frame.size.width - 20,
                                nameLabel.frame.size.height);
+    nameLabel.backgroundColor = [UIColor colorWithRed:.48 green:.48 blue:.48 alpha:1.0];
   [self.view addSubview:nameLabel];
   
   UITextField *nameInput = [[UITextField alloc] initWithFrame:CGRectZero];
@@ -167,6 +171,7 @@
                                       nameInput.frame.origin.y + nameInput.frame.size.height + 10,
                                       self.view.frame.size.width - 20,
                                       descriptionLabel.frame.size.height);
+    descriptionLabel.backgroundColor = [UIColor colorWithRed:.48 green:.48 blue:.48 alpha:1.0];
   [self.view addSubview:descriptionLabel];
   
   UITextView *descriptionInput = [[UITextView alloc] initWithFrame:CGRectZero];
@@ -251,6 +256,8 @@
   
   ((UIScrollView *) self.view).contentSize = CGSizeMake(self.view.frame.size.width,
                                                         submitButton.frame.origin.y + submitButton.frame.size.height + 10);
+    self.view.backgroundColor = [UIColor colorWithRed:.48 green:.48 blue:.48 alpha:1.0];
+
 }
 
 - (void)viewDidUnload

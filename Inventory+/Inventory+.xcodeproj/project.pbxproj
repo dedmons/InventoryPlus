@@ -25,6 +25,8 @@
 		C50F9B739C75452F8D0392A0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 193B2D85D0D248BFBB5D3F72 /* libPods.a */; };
 		F753888615E9788600E6FA4E /* IPSupplyLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = F753888515E9788600E6FA4E /* IPSupplyLevelView.m */; };
 		F75388CC15E9841400E6FA4E /* libZXingWidget.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C956EF15E961B90065A938 /* libZXingWidget.a */; };
+		F7AD4AA315E9A45600150759 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AD4AA215E9A45600150759 /* background.png */; };
+		F7AD4AA915E9AA4A00150759 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = F7AD4AA815E9AA4A00150759 /* button.png */; };
 		F7C955B515E913750065A938 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B415E913750065A938 /* UIKit.framework */; };
 		F7C955B715E913750065A938 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B615E913750065A938 /* Foundation.framework */; };
 		F7C955B915E913750065A938 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C955B815E913750065A938 /* CoreGraphics.framework */; };
@@ -92,6 +94,8 @@
 		7BCAB882D44745CB8FB687CD /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F753888415E9788600E6FA4E /* IPSupplyLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPSupplyLevelView.h; sourceTree = "<group>"; };
 		F753888515E9788600E6FA4E /* IPSupplyLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPSupplyLevelView.m; sourceTree = "<group>"; };
+		F7AD4AA215E9A45600150759 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		F7AD4AA815E9AA4A00150759 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		F7C955B015E913750065A938 /* Inventory+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C955B415E913750065A938 /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F7C955B615E913750065A938 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -253,6 +257,8 @@
 		F7C9563B15E938D50065A938 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F7AD4AA815E9AA4A00150759 /* button.png */,
+				F7AD4AA215E9A45600150759 /* background.png */,
 				53EFFFA415E97F140020A92A /* Archive.png */,
 				53EFFFA515E97F140020A92A /* Archive@2x.png */,
 				53EFFFA015E97DBA0020A92A /* Target.png */,
@@ -364,6 +370,8 @@
 				53EFFFA615E97F140020A92A /* Archive.png in Resources */,
 				53EFFFA715E97F140020A92A /* Archive@2x.png in Resources */,
 				53EFFFE315E995BC0020A92A /* IPOrderViewController.xib in Resources */,
+				F7AD4AA315E9A45600150759 /* background.png in Resources */,
+				F7AD4AA915E9AA4A00150759 /* button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

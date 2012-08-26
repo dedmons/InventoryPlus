@@ -38,7 +38,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-  
+    self.view.backgroundColor = [UIColor colorWithRed:.48 green:.48 blue:.48 alpha:1.0];
+
   self.itemLabel.text = self.item.name;
   self.capacityLabel.text = [NSString stringWithFormat:@"Capacity: %d", self.item.capacity];
   self.currentLabel.text = [NSString stringWithFormat:@"Current inventory: %d", self.item.currentInventory];

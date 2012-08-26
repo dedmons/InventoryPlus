@@ -14,6 +14,10 @@
 {
     // Override point for customization after application launch.
     [Parse setApplicationId:@"utG42kJHFQZNtO7nHdLoIlXpCU9Rg910B2gX30Jh" clientKey:@"kSLrni321KnrpcUzqV2BhkWJeQWjPjZf6VWEIHNS"];
+
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:.38 green:.38 blue:.38 alpha:1.0]];
+    [[UISearchBar appearance] setTintColor:[UIColor colorWithRed:.38 green:.38 blue:.38 alpha:1.0]];
+    
     return YES;
 }
 							

@@ -29,6 +29,8 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.once = 0;
+    self.view.backgroundColor = [UIColor colorWithRed:.48 green:.48 blue:.48 alpha:1.0];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -103,7 +105,7 @@
 
 
 - (void)zxingControllerDidCancel:(ZXingWidgetController *)controller {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissModalViewControllerAnimated:NO];
     [self.navigationController popViewControllerAnimated:NO];
 }
 
